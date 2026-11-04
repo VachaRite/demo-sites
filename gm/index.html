@@ -88,6 +88,7 @@
   [data-mark="outline"] .hero .mark { background: none; -webkit-text-stroke: 1.5px color-mix(in srgb, var(--ink) 22%, transparent); }
   [data-mark="accent"] .hero .mark { background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 45%, transparent), transparent 90%); -webkit-background-clip: text; background-clip: text; }
   [data-mark="none"] .hero .mark { display: none; }
+  [data-mark="none"]:not([data-hero="full"]) .hero .wrap { padding-top: 0; }
   .hero .wrap { display: grid; grid-template-columns: 1fr 1.15fr; gap: 32px; align-items: center; min-height: 520px; padding-top: clamp(40px, 9vw, 120px); }
   .hero h1 { font-size: clamp(28px, 3.8vw, 46px); font-weight: var(--head-weight); margin-bottom: 18px; }
   .hero h1 em { font-style: normal; color: var(--accent); display: block; }
