@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru" data-mode="graphite" data-head="exo" data-body="golos" data-hero="full" data-mark="gradient" data-cards="round" data-order="stats,services,why,works,prices,reviews" style="--accent: #c6ff00; --on-accent: #111;">
+<html lang="ru" data-mode="dark" data-head="russo" data-body="golos" data-hero="full" data-mark="gradient" data-cards="round" data-order="stats,services,why,works,prices,reviews" style="--accent: #00c2a8; --on-accent: #111;">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 <meta name="description" content="Шиномонтаж «У Лехи» в Ярославле: переобувка, ремонт проколов и порезов, правка и сварка дисков, сезонное хранение шин. 4.9 на Яндекс Картах, 119 отзывов. Телефон: +7 (906) 528-01-91.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo%202:wght@600;800&amp;family=Golos%20Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Golos%20Text:wght@400;500;600;700&amp;family=Russo%20One&amp;display=swap" rel="stylesheet">
 <style>
   :root {
     --accent: #ff5a1f;
@@ -417,7 +417,8 @@
     (ct.address ? '<div>' + I.pin + '<span><small>Адрес</small>' + esc(ct.address) + (ct.address_note ? '<br><span class="muted">' + esc(ct.address_note) + '</span>' : "") + '</span></div>' : "") +
     (ct.hours ? '<div>' + I.clock + '<span><small>Часы работы</small>' + esc(ct.hours) + '</span></div>' : "") +
     (msgr ? '<a class="btn btn-accent" href="' + esc(msgr) + '" target="_blank" rel="noopener">' + I.chat + 'Написать в ' + msgrName + '</a>' : "") +
-    '</div><div class="map">' + (ct.yandex_oid ? '<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?oid=' + esc(ct.yandex_oid) + '&ol=biz&z=16" title="Карта"></iframe>' : "") + '</div></div></section>');
+    '</div><div class="map">' + (ct.yandex_oid ? '<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?oid=' + esc(ct.yandex_oid) + '&ol=biz&z=16" title="Карта"></iframe>'
+      : ct.map_ll ? '<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=' + esc(ct.map_ll) + '&z=16&pt=' + esc(ct.map_ll) + ',pm2rdm" title="Карта"></iframe>' : "") + '</div></div></section>');
 
   // footer: every line is a working link (anchor, call, route, map, messenger)
   var fl = function (arr) { return arr.filter(Boolean).join(""); };

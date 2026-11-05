@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru" data-mode="graphite" data-head="oswald" data-body="manrope" data-hero="center" data-mark="gradient" data-cards="round" data-order="stats,services,prices,reviews,works,why" style="--accent: #a855f7; --on-accent: #fff;">
+<html lang="ru" data-mode="graphite" data-head="oswald" data-body="manrope" data-hero="full" data-mark="gradient" data-cards="round" data-order="stats,services,prices,reviews,works,why" style="--accent: #a855f7; --on-accent: #fff;">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -417,7 +417,8 @@
     (ct.address ? '<div>' + I.pin + '<span><small>Адрес</small>' + esc(ct.address) + (ct.address_note ? '<br><span class="muted">' + esc(ct.address_note) + '</span>' : "") + '</span></div>' : "") +
     (ct.hours ? '<div>' + I.clock + '<span><small>Часы работы</small>' + esc(ct.hours) + '</span></div>' : "") +
     (msgr ? '<a class="btn btn-accent" href="' + esc(msgr) + '" target="_blank" rel="noopener">' + I.chat + 'Написать в ' + msgrName + '</a>' : "") +
-    '</div><div class="map">' + (ct.yandex_oid ? '<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?oid=' + esc(ct.yandex_oid) + '&ol=biz&z=16" title="Карта"></iframe>' : "") + '</div></div></section>');
+    '</div><div class="map">' + (ct.yandex_oid ? '<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?oid=' + esc(ct.yandex_oid) + '&ol=biz&z=16" title="Карта"></iframe>'
+      : ct.map_ll ? '<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=' + esc(ct.map_ll) + '&z=16&pt=' + esc(ct.map_ll) + ',pm2rdm" title="Карта"></iframe>' : "") + '</div></div></section>');
 
   // footer: every line is a working link (anchor, call, route, map, messenger)
   var fl = function (arr) { return arr.filter(Boolean).join(""); };
