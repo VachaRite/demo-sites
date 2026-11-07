@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ru" data-style="blush">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pro nails studio — ногтевая студия в Красноярске, улица Академика Киренского, 32</title>
+<meta name="description" content="Женский педикюр, наращивание гелем, мужской маникюр, японский маникюр. Пишут о вежливом и приятном общении. улица Академика Киренского, 32, Красноярск. 5,0 в 2ГИС. Тел.: +7 (923) 668-30-00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&family=Unbounded:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ---------- tokens per style (references: Monotone, Nailé, Luxé, Iceland) ---------- */
+:root { --accent: #a65e8c; --max: 1200px; --gut: clamp(16px, 4vw, 40px); }
+[data-style="mono"]  { --bg:#f3eee6; --bg2:#1a1a1a; --ink:#141414; --ink2:#5d5a55; --line:#141414; --card:#fffdf8; --on2:#f3eee6;
+  --head:"Oswald", Impact, sans-serif; --body:"Manrope", system-ui, sans-serif; --r:0px; --upper:uppercase; --hw:700; --track:-.01em; }
+[data-style="blush"] { --bg:#fbf5f3; --bg2:#f3e3df; --ink:#2b2023; --ink2:#7b6a6d; --line:#ecd9d4; --card:#ffffff; --on2:#2b2023;
+  --head:"Cormorant Garamond", Georgia, serif; --body:"Manrope", system-ui, sans-serif; --r:18px; --upper:none; --hw:500; --track:-.01em; }
+[data-style="luxe"]  { --bg:#0f0d0c; --bg2:#e9ddcc; --ink:#f1e9de; --ink2:#a99c8c; --line:#3a332d; --card:#181513; --on2:#1b1714;
+  --head:"Cormorant Garamond", Georgia, serif; --body:"Manrope", system-ui, sans-serif; --r:2px; --upper:uppercase; --hw:300; --track:.02em; }
+[data-style="glass"] { --bg:#eef1f2; --bg2:#202629; --ink:#1b2024; --ink2:#5f6a70; --line:#d4dadd; --card:rgba(255,255,255,.72); --on2:#eef1f2;
+  --head:"Unbounded", system-ui, sans-serif; --body:"Manrope", system-ui, sans-serif; --r:22px; --upper:uppercase; --hw:200; --track:.04em; }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gut); }
+h1, h2, h3 { font-family: var(--head); font-weight: var(--hw); text-transform: var(--upper); letter-spacing: var(--track); line-height: 1.02; margin: 0; }
+h2 { font-size: clamp(34px, 5.2vw, 64px); }
+.kicker { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink2); margin: 0 0 14px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: calc(var(--r) * 4); background: var(--ink); color: var(--bg);
+  text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: .04em; border: 1px solid var(--ink); transition: transform .2s, background .2s, color .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn .arr { transition: transform .2s; } .btn:hover .arr { transform: translateX(4px); }
+section { padding: clamp(64px, 9vw, 120px) 0; }
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+.sec-head p { max-width: 420px; color: var(--ink2); margin: 0; }
+
+/* ---------- header ---------- */
+header.top { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
+.logo { font-family: var(--head); font-weight: 600; font-size: 22px; text-decoration: none; text-transform: var(--upper); letter-spacing: var(--track); line-height: 1; }
+.logo small { display: block; font: 500 10px/1.4 var(--body); letter-spacing: .24em; text-transform: uppercase; color: var(--ink2); margin-top: 3px; }
+nav.menu { display: flex; gap: 28px; font-size: 14px; }
+nav.menu a { text-decoration: none; opacity: .85; } nav.menu a:hover { opacity: 1; }
+header.top .btn { padding: 11px 18px; font-size: 13px; }
+header.top.solid { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+@media (max-width: 860px) { nav.menu { display: none; } }
+
+/* ---------- hero: common ---------- */
+.hero { position: relative; padding: 0; overflow: hidden; }
+.hero .meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 13px; color: var(--ink2); margin-top: 26px; }
+.hero .meta b { color: var(--ink); font-weight: 600; }
+.stars { color: var(--accent); letter-spacing: 2px; }
+
+/* mono: giant condensed type under a black-and-white photo */
+[data-style="mono"] .hero { padding-top: 72px; }
+[data-style="mono"] .hero .photo { position: relative; height: min(64vh, 620px); background: #222; overflow: hidden; }
+[data-style="mono"] .hero .photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); transform: scale(1.06); animation: settle 2.2s cubic-bezier(.2,.7,.2,1) forwards; }
+[data-style="mono"] .hero .photo .brand { position: absolute; left: 50%; top: 46%; transform: translate(-50%,-50%); color: #fff; text-align: center; font-family: var(--head); font-size: clamp(40px, 7vw, 86px); font-weight: 700; text-transform: uppercase; text-shadow: 0 4px 30px rgba(0,0,0,.35); }
+[data-style="mono"] .hero .photo .brand small { display: block; font: 600 12px var(--body); letter-spacing: .3em; margin-top: 8px; }
+[data-style="mono"] .hero .giant { background: var(--bg2); color: var(--on2); font-family: var(--head); font-weight: 700; text-transform: uppercase; text-align: center;
+  font-size: clamp(54px, 13.4vw, 190px); line-height: .86; padding: 18px 8px 10px; letter-spacing: -.02em; white-space: nowrap; overflow: hidden; }
+[data-style="mono"] .hero .under { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; padding: 40px 0 10px; align-items: end; }
+[data-style="mono"] .hero .under p { margin: 0; font-size: 18px; max-width: 520px; }
+[data-style="mono"] .hero .under .act { display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap; }
+@media (max-width: 760px) { [data-style="mono"] .hero .under { grid-template-columns: 1fr; } [data-style="mono"] .hero .under .act { justify-content: flex-start; } }
+
+/* blush: serif headline left, rounded photo right, handwritten notes */
+[data-style="blush"] .hero { padding: 120px 0 40px; background: linear-gradient(180deg, #f6e6e2 0%, var(--bg) 100%); }
+[data-style="blush"] .hero .grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+[data-style="blush"] .hero h1 { font-size: clamp(46px, 6.4vw, 86px); font-weight: 500; }
+[data-style="blush"] .hero h1 em { font-style: italic; color: var(--accent); }
+[data-style="blush"] .hero p.lead { font-size: 18px; color: var(--ink2); max-width: 470px; margin: 22px 0 30px; }
+[data-style="blush"] .hero .photo { position: relative; aspect-ratio: 4/4.4; border-radius: 220px 220px 24px 24px; overflow: hidden; box-shadow: 0 30px 80px -30px rgba(120,60,60,.45); }
+[data-style="blush"] .hero .photo img { width: 100%; height: 100%; object-fit: cover; }
+[data-style="blush"] .script { font-family: "Caveat", cursive; color: var(--accent); font-size: 30px; line-height: 1; transform: rotate(-8deg); position: absolute; }
+[data-style="blush"] .hero .script { right: -10px; top: 18px; background: #fff; padding: 12px 16px; border-radius: 14px; box-shadow: 0 10px 30px -10px rgba(0,0,0,.2); }
+[data-style="blush"] .chips { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 34px; }
+[data-style="blush"] .chips div { font-size: 13px; color: var(--ink2); } [data-style="blush"] .chips b { display: block; color: var(--ink); font-size: 14px; }
+@media (max-width: 860px) { [data-style="blush"] .hero .grid { grid-template-columns: 1fr; } [data-style="blush"] .hero .photo { max-width: 420px; } }
+
+/* luxe: dark full-bleed photo, thin uppercase serif, gold rule */
+[data-style="luxe"] .hero { min-height: 100vh; display: flex; align-items: center; }
+[data-style="luxe"] .hero .bgph { position: absolute; inset: 0; }
+[data-style="luxe"] .hero .bgph img { width: 100%; height: 100%; object-fit: cover; opacity: .55; transform: scale(1.08); animation: settle 2.6s cubic-bezier(.2,.7,.2,1) forwards; }
+[data-style="luxe"] .hero .bgph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #0f0d0c 0%, rgba(15,13,12,.75) 45%, rgba(15,13,12,.2) 100%), linear-gradient(0deg, #0f0d0c 0%, transparent 35%); }
+[data-style="luxe"] .hero .wrap { position: relative; width: 100%; padding-top: 110px; padding-bottom: 60px; }
+[data-style="luxe"] .hero h1 { font-size: clamp(48px, 8vw, 112px); font-weight: 300; max-width: 900px; }
+[data-style="luxe"] .hero .rule { width: 90px; height: 1px; background: var(--accent); margin: 28px 0; }
+[data-style="luxe"] .hero p.lead { color: var(--ink2); max-width: 440px; font-size: 17px; margin: 0 0 32px; }
+[data-style="luxe"] .btn { background: var(--accent); color: #17120e; border-color: var(--accent); border-radius: 2px; text-transform: uppercase; font-size: 12px; letter-spacing: .16em; }
+[data-style="luxe"] .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+[data-style="luxe"] .seal { position: absolute; right: var(--gut); bottom: 60px; width: 150px; height: 150px; border: 1px solid var(--accent); border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--accent); font-family: var(--head); font-size: 54px; animation: spin 40s linear infinite; }
+[data-style="luxe"] .seal small { position: absolute; inset: 10px; font: 500 9px/1 var(--body); letter-spacing: .3em; }
+@media (max-width: 860px) { [data-style="luxe"] .seal { display: none; } }
+
+/* glass: full-bleed photo, frosted panel, huge thin letters split across */
+[data-style="glass"] .hero { min-height: 100vh; display: flex; align-items: stretch; padding: 92px var(--gut) var(--gut); }
+[data-style="glass"] .hero .bgph { position: absolute; inset: 0; }
+[data-style="glass"] .hero .bgph img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); animation: settle 2.4s cubic-bezier(.2,.7,.2,1) forwards; }
+[data-style="glass"] .hero .bgph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.05) 60%); }
+[data-style="glass"] .hero .frame { position: relative; flex: 1; display: grid; grid-template-columns: minmax(300px, 38%) 1fr; border-radius: 26px; overflow: hidden; border: 1px solid rgba(255,255,255,.35); }
+[data-style="glass"] .hero .panel { backdrop-filter: blur(22px) saturate(1.2); -webkit-backdrop-filter: blur(22px) saturate(1.2); background: rgba(255,255,255,.18); color: #fff; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 30px; }
+[data-style="glass"] .hero .panel .kicker { color: rgba(255,255,255,.85); }
+[data-style="glass"] .hero .num { font: 200 44px/1 "Unbounded"; color: #fff; }
+[data-style="glass"] .hero .panel p { color: rgba(255,255,255,.88); margin: 12px 0 0; font-size: 15px; max-width: 360px; }
+[data-style="glass"] .hero .big { position: absolute; left: 0; right: 0; bottom: 6%; padding: 0 4%; display: flex; justify-content: space-between; pointer-events: none;
+  font: 200 clamp(56px, 12vw, 190px)/.9 "Unbounded"; color: #fff; text-transform: uppercase; letter-spacing: .02em; }
+[data-style="glass"] .hero .big span:first-child { color: rgba(255,255,255,.75); }
+[data-style="glass"] .hero .btn { background: #fff; color: #1b2024; border-color: #fff; }
+[data-style="glass"] .hero .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.6); }
+[data-style="glass"] header.top:not(.solid) { color: #fff; } [data-style="glass"] header.top:not(.solid) .logo small { color: rgba(255,255,255,.75); }
+[data-style="glass"] header.top:not(.solid) .btn { background: #fff; color: #1b2024; border-color: #fff; }
+[data-style="glass"] .card, [data-style="glass"] .price-group { backdrop-filter: blur(10px); }
+@media (max-width: 860px) { [data-style="glass"] .hero .frame { grid-template-columns: 1fr; } [data-style="glass"] .hero .panel { margin-top: 38vh; } [data-style="glass"] .hero .big { top: 22%; bottom: auto; flex-direction: column; } }
+[data-style="luxe"] header.top .btn, [data-style="mono"] header.top .btn { border-radius: var(--r); }
+
+/* ---------- services: photo cards ---------- */
+.cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.card { background: var(--card); border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); transition: transform .35s, box-shadow .35s; display: flex; flex-direction: column; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px -28px rgba(0,0,0,.35); }
+.card .ph { aspect-ratio: 1/1; background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 30%, var(--bg)) 0%, var(--bg2) 100%); overflow: hidden; position: relative; }
+.card .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; } .card:hover .ph img { transform: scale(1.06); }
+.card .ph .n { position: absolute; left: 14px; bottom: 10px; font: 200 54px/1 var(--head); color: var(--on2); opacity: .8; }
+.card .body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card h3 { font-size: 20px; font-weight: 600; text-transform: none; letter-spacing: 0; font-family: var(--body); line-height: 1.25; }
+.card p { margin: 0; color: var(--ink2); font-size: 14px; }
+.card .price { margin-top: auto; padding-top: 10px; font-weight: 700; color: var(--accent); }
+[data-style="mono"] .card { border: 0; background: transparent; } [data-style="mono"] .card .ph img { filter: grayscale(.25); }
+[data-style="mono"] .card h3 { font: 600 15px/1.2 var(--head); text-transform: uppercase; letter-spacing: .02em; }
+[data-style="mono"] .card .price { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+[data-style="luxe"] .card { background: transparent; border: 0; } [data-style="luxe"] .card .ph { aspect-ratio: 3/4; }
+[data-style="luxe"] .card h3 { font: 400 14px/1.3 var(--body); letter-spacing: .14em; text-transform: uppercase; }
+
+/* ---------- dark band (mono pedicure block / luxe beige / blush offer / glass dark) ---------- */
+.band { background: var(--bg2); color: var(--on2); }
+.band .kicker, .band p { color: color-mix(in srgb, var(--on2) 70%, transparent); }
+.band .grid2 { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: center; }
+.band .photo { border-radius: var(--r); overflow: hidden; aspect-ratio: 4/3; background: #222; } .band .photo img { width: 100%; height: 100%; object-fit: cover; }
+.feats { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 30px; margin-top: 34px; }
+.feats h3 { font: 600 17px/1.3 var(--body); text-transform: none; letter-spacing: 0; margin-bottom: 6px; }
+.feats p { margin: 0; font-size: 14px; }
+.feats .ic { width: 38px; height: 38px; border-radius: 50%; border: 1px solid color-mix(in srgb, var(--on2) 35%, transparent); display: grid; place-items: center; margin-bottom: 12px; color: var(--accent); font-size: 16px; }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 30px; }
+.tags span { padding: 7px 14px; border: 1px solid color-mix(in srgb, var(--on2) 30%, transparent); border-radius: 999px; font-size: 13px; }
+@media (max-width: 860px) { .band .grid2, .feats { grid-template-columns: 1fr; } }
+[data-style="mono"] .band h2::after { content: "(" attr(data-n) ")"; font-size: .3em; vertical-align: super; margin-left: 6px; }
+
+/* ---------- price list ---------- */
+.prices { columns: 2 380px; column-gap: 40px; }
+.price-group { break-inside: avoid; margin: 0 0 34px; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 24px 26px; }
+.price-group h3 { font-size: 24px; margin-bottom: 12px; }
+[data-style="blush"] .price-group h3 { font-weight: 600; }
+.row { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; font-size: 15px; }
+.row + .row { border-top: 1px dashed var(--line); }
+.row .dots { flex: 1; } .row b { white-space: nowrap; font-weight: 600; }
+.note { color: var(--ink2); font-size: 14px; margin-top: 8px; }
+[data-style="mono"] .price-group { background: transparent; border: 0; border-top: 2px solid var(--ink); border-radius: 0; padding: 18px 0; }
+
+/* ---------- gallery strip ---------- */
+.strip { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: thin; }
+.strip img { height: 300px; width: auto; aspect-ratio: 1/1; object-fit: cover; border-radius: var(--r); scroll-snap-align: start; flex: none; }
+[data-style="luxe"] .strip img { aspect-ratio: 3/4; height: 360px; }
+
+/* ---------- reviews ---------- */
+.rev-grid { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; }
+.score { border: 1px solid var(--line); border-radius: var(--r); padding: 30px; text-align: center; background: var(--card); text-decoration: none; display: block; }
+.score .v { font: var(--hw) 72px/1 var(--head); } .score .stars { font-size: 20px; } .score p { color: var(--ink2); margin: 8px 0 0; font-size: 14px; }
+.score .go { display: inline-block; margin-top: 16px; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+.points { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.point { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 22px 20px; text-decoration: none; display: block; transition: border-color .2s, transform .2s; }
+.point:hover { border-color: var(--accent); transform: translateY(-3px); }
+.point q { display: block; quotes: none; font-size: 16px; } .point small { display: block; margin-top: 12px; color: var(--ink2); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+[data-style="blush"] .point q, [data-style="luxe"] .point q { font: italic 400 21px/1.35 "Cormorant Garamond", serif; }
+@media (max-width: 860px) { .rev-grid, .points { grid-template-columns: 1fr; } }
+
+/* ---------- contacts ---------- */
+.contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: stretch; }
+.contact dl { margin: 0; display: grid; gap: 22px; } .contact dt { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink2); margin-bottom: 4px; } .contact dd { margin: 0; font-size: 18px; }
+.contact dd a { text-decoration: none; } .contact dd a:hover { color: var(--accent); }
+.hours { display: grid; grid-template-columns: auto 1fr; gap: 2px 18px; font-size: 16px; }
+.msgr { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+.map { min-height: 380px; border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); background: var(--bg2); }
+.map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr; } }
+
+/* ---------- CTA + footer ---------- */
+.cta { text-align: center; }
+.cta h2 { max-width: 900px; margin: 0 auto 18px; }
+.cta p { color: var(--ink2); max-width: 560px; margin: 0 auto 30px; }
+[data-style="blush"] .cta { background: linear-gradient(120deg, #f3dcd6, #fbefe9); border-radius: 0; position: relative; overflow: hidden; }
+[data-style="blush"] .cta .script { position: static; display: inline-block; margin-bottom: 8px; transform: rotate(-4deg); font-size: 34px; }
+footer { padding: 50px 0 34px; border-top: 1px solid var(--line); font-size: 14px; }
+footer .cols { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 30px; }
+footer h4 { margin: 0 0 12px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink2); font-weight: 600; }
+footer a { display: block; text-decoration: none; padding: 3px 0; opacity: .85; } footer a:hover { opacity: 1; color: var(--accent); }
+footer .legal { margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--ink2); font-size: 12px; }
+@media (max-width: 860px) { footer .cols { grid-template-columns: 1fr 1fr; } }
+
+/* mobile sticky booking bar */
+.mbar { display: none; }
+@media (max-width: 700px) { .mbar { display: flex; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; gap: 8px; }
+  .mbar a { flex: 1; text-align: center; padding: 14px; border-radius: 999px; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600; font-size: 14px; box-shadow: 0 10px 30px -10px rgba(0,0,0,.5); }
+  .mbar a + a { background: var(--accent); color: #fff; } body { padding-bottom: 70px; } }
+
+/* ---------- motion ---------- */
+.rv { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+.rv.in { opacity: 1; transform: none; }
+.rv.d1 { transition-delay: .1s; } .rv.d2 { transition-delay: .2s; } .rv.d3 { transition-delay: .3s; }
+.hero .up { animation: up 1s cubic-bezier(.2,.7,.2,1) both; } .hero .up.d1 { animation-delay: .15s; } .hero .up.d2 { animation-delay: .3s; } .hero .up.d3 { animation-delay: .45s; }
+@keyframes up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+@keyframes settle { to { transform: scale(1); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .rv { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>window.CONTENT = {"slug": "pro-nails-studio-krasnoyarsk", "niche": "маникюр", "style": "blush", "accent": "#a65e8c", "meta": {"title": "Pro nails studio — ногтевая студия в Красноярске, улица Академика Киренского, 32", "description": "Женский педикюр, наращивание гелем, мужской маникюр, японский маникюр. Пишут о вежливом и приятном общении. улица Академика Киренского, 32, Красноярск. 5,0 в 2ГИС. Тел.: +7 (923) 668-30-00."}, "brand": {"name": "Pro nails studio", "kind": "ногтевая студия", "city": "Красноярск"}, "hero": {"kicker": "Ногтевая студия · Красноярск", "title": "Маникюр и педикюр", "title2": "в Красноярске", "text": "Женский педикюр, наращивание гелем, мужской маникюр, японский маникюр. Пишут о вежливом и приятном общении.", "photo": "https://i4.photo.2gis.com/main/branch/7/70000001039543946/common", "giant": "Ногтевая студия", "script": "ждём вас ♡", "big": "Pro|nails studio", "chips": [["5,0 ★", "337 отзывов в 2ГИС"], ["Часы", "Ежедневно 09:00–21:00"], ["Запись", "онлайн, 24/7"]]}, "rating": {"value": "5,0", "count": 337, "label": "337 отзывов в 2ГИС"}, "services_kicker": "Услуги", "services_title": "Наши услуги", "services_lead": "Цены — из прайса студии в 2ГИС. Точную стоимость мастер назовёт до начала работы.", "services": [{"name": "Маникюр с покрытием гель-лак и дизайном", "text": "Процедура включает в себя: Аккуратное снятие старого покрытия-мягко и без повреждений, обработка ногтей и кути", "price": "1 410–3 700 ₽", "img": "https://cachizer1.2gis.com/market/bd350e9b-f3b7-43df-aba9-c92c2265ee71.png?h=640&w=640"}, {"name": "Маникюр с прозрачным покрытием гель-лак", "text": "В стоимость включены снятие предыдущего покрытия нашей студии, комбинированный маникюр, нанесение прозрачной б", "price": "1 300–2 100 ₽", "img": "https://cachizer2.2gis.com/market/129e77db-802f-455c-b9c7-80aa5489f715.png?h=640&w=640"}, {"name": "Маникюр без покрытия", "text": "Выполняется в комбинированной технике и включает в себя обработку боковых валиков, обрезание кутикулы, придани", "price": "900–1 600 ₽", "img": "https://cachizer3.2gis.com/market/a42ef77a-4278-47d1-8c58-dc9cc65ab730.png?h=640&w=640"}, {"name": "Снятие + японский маникюр", "text": "Услуга включает снятие покрытия и японский маникюр.\nЯпонский маникюр – это комплекс, направленный на интенсивн", "price": "1 600–2 400 ₽", "img": "https://cachizer3.2gis.com/market/71535fdd-4a7e-41e4-bb14-4cab1fdda859.png?h=640&w=640"}, {"name": "Японский маникюр", "text": "Услуга включает японский маникюр без снятия предыдущего покрытия.\nЯпонский маникюр – это комплекс, направленны", "price": "1 400–2 200 ₽", "img": "https://cachizer3.2gis.com/market/eea12c5b-fc52-4a3e-9ddf-90e9f1983ad4.png?h=640&w=640"}, {"name": "Снятие + маникюр с восстановлением IBX", "text": "Услуга включает в себя снятие покрытия и маникюр с применением восстановительной системы IBX.\nIBX System – это", "price": "1 700–2 500 ₽", "img": "https://cachizer2.2gis.com/market/bed1d368-2fbf-42a0-bdca-6f711ec000ec.png?h=640&w=640"}, {"name": "Маникюр с восстановлением IBX", "text": "Услуга включает в себя маникюр без снятия покрытия !\nIBX System – это комплексная восстанавливающая система дл", "price": "1 500–2 300 ₽", "img": "https://cachizer1.2gis.com/market/3f7e3558-c1df-4cb0-ac73-7f33612084ae.png?h=640&w=640"}, {"name": "IBX без маникюра", "text": "Услуга включает в себя нанесение IBX System без обработки маникюра !\nIBX System- это комплексная восстанавлива", "price": "700 ₽", "img": "https://cachizer2.2gis.com/market/8212ca73-ae95-4c95-8d6e-e914fc0d643f.png?h=640&w=640"}], "why_kicker": "Почему Pro nails studio", "why_title": "За что нас выбирают", "features": [{"icon": "✦", "title": "Номинант 2026", "text": "Отметка в карточке студии в 2ГИС."}, {"icon": "♡", "title": "Приятное общение", "text": "Клиенты отмечают доброжелательных мастеров."}, {"icon": "♡", "title": "Аккуратно", "text": "Клиенты чаще всего отмечают аккуратность мастеров."}, {"icon": "♡", "title": "К нам возвращаются", "text": "Многие клиенты ходят сюда годами."}, {"icon": "♡", "title": "Без долгого ожидания", "text": "Пишут, что процедуры не растягиваются."}, {"icon": "◷", "title": "Онлайн-запись", "text": "Выберите мастера и время на сайте — без звонков."}], "tags": ["Женский педикюр", "Наращивание гелем", "Мужской маникюр", "Японский маникюр", "Гель-лак", "Аппаратный маникюр", "Мужской педикюр"], "why_photo": "https://cachizer1.2gis.com/market/35490d52-4201-4351-a442-11109ec43c61.png?h=720&w=720", "prices_title": "Прайс", "prices": [{"cat": "Комбинированный маникюр", "items": [{"name": "Маникюр с покрытием гель-лак", "price": "1 400–2 700 ₽"}, {"name": "Маникюр с покрытием гель-лак и дизайном", "price": "1 410–3 700 ₽"}, {"name": "Маникюр с прозрачным покрытием гель-лак", "price": "1 300–2 100 ₽"}, {"name": "Снятие + маникюр без покрытия", "price": "1 000–1 800 ₽"}, {"name": "Маникюр без покрытия", "price": "900–1 600 ₽"}, {"name": "Снятие + японский маникюр", "price": "1 600–2 400 ₽"}, {"name": "Японский маникюр", "price": "1 400–2 200 ₽"}, {"name": "Снятие + маникюр с восстановлением IBX", "price": "1 700–2 500 ₽"}, {"name": "Маникюр с восстановлением IBX", "price": "1 500–2 300 ₽"}, {"name": "IBX без маникюра", "price": "700 ₽"}]}, {"cat": "Пилочный маникюр", "items": [{"name": "Пилочный маникюр с покрытием гель-лак", "price": "2 500 ₽"}, {"name": "Пилочный маникюр с покрытием гель-лак и дизайном", "price": "2 510–3 500 ₽"}, {"name": "Пилочный маникюр с прозрачным покрытием гель-лак", "price": "2 100 ₽"}, {"name": "Снятие + пилочный маникюр без покрытия", "price": "1 800 ₽"}, {"name": "Пилочный маникюр без покрытия", "price": "1 600 ₽"}, {"name": "Снятие + японский пилочный маникюр", "price": "2 400 ₽"}, {"name": "Японский пилочный маникюр", "price": "2 200 ₽"}, {"name": "Снятие + пилочный маникюр с восстановлением IBX", "price": "2 500 ₽"}, {"name": "Пилочный маникюр с восстановлением IBX", "price": "2 300 ₽"}]}, {"cat": "Наращивание", "items": [{"name": "Наращивание ногтей", "price": "2 400–4 000 ₽"}, {"name": "Наращивание ногтей с дизайном", "price": "2 410–5 000 ₽"}, {"name": "Коррекция наращенных ногтей", "price": "2 300–3 200 ₽"}, {"name": "Коррекция наращенных ногтей с дизайном", "price": "2 310–4 300 ₽"}]}, {"cat": "Медицинский педикюр (подология)", "items": [{"name": "Консультация подолога", "price": "500 ₽"}, {"name": "Парамедицинский педикюр – лёгкая степень", "price": "2 300 ₽"}, {"name": "Парамедицинский педикюр – средняя степень", "price": "2 800 ₽"}, {"name": "Парамедицинский педикюр – сложная степень", "price": "3 300 ₽"}, {"name": "Парамедицинский педикюр (пальчики)", "price": "1 900–2 200 ₽"}, {"name": "Парамедицинский педикюр (стопа)", "price": "1 900–2 200 ₽"}, {"name": "Обработка натоптышей", "price": "500 ₽"}, {"name": "Изготовление индивидуального ортеза (1 г)", "price": "100 ₽"}, {"name": "Покрытие лечебным лаком", "price": "300 ₽"}, {"name": "Японский педикюр (стопа и пальчики)", "price": "3 100 ₽"}, {"name": "Японский педикюр (пальчики)", "price": "2 400 ₽"}, {"name": "Снятие гель-лака на ногах", "price": "400 ₽"}]}, {"cat": "Комбинированный педикюр", "items": [{"name": "Педикюр с покрытием гель-лак (стопа и пальчики)", "price": "2 700–3 300 ₽"}, {"name": "Педикюр с покрытием гель-лак и дизайном (стопа и пальчики)", "price": "2 710–4 300 ₽"}, {"name": "Педикюр с покрытием гель-лак (пальчики)", "price": "1 800–2 500 ₽"}, {"name": "Педикюр с покрытием гель-лак и дизайном (пальчики)", "price": "1 810–3 500 ₽"}, {"name": "Педикюр с покрытием плёнками (стопа и пальчики)", "price": "3 400 ₽"}, {"name": "Педикюр с покрытием плёнками (пальчики)", "price": "2 600 ₽"}, {"name": "Педикюр без покрытия (стопа и пальчики)", "price": "2 300–2 900 ₽"}, {"name": "Педикюр без покрытия (пальчики)", "price": "1 500–2 300 ₽"}, {"name": "Педикюр без покрытия (стопа)", "price": "1 200–1 800 ₽"}, {"name": "Педикюр с восстановлением IBX (стопа и пальчики)", "price": "3 100–3 500 ₽"}, {"name": "Педикюр с восстановлением IBX (пальчики)", "price": "2 300–2 700 ₽"}, {"name": "Педикюр с покрытием гель-лак и дизайном (стопа и пальчики)", "price": "2 910–3 900 ₽"}]}, {"cat": "Препаратный педикюр", "items": [{"name": "Фруктовый педикюр с покрытием (стопа и пальчики)", "price": "4 000 ₽"}, {"name": "Фруктовый педикюр с покрытием пальчики", "price": "2 800 ₽"}]}], "prices_note": "Цены предоставлены студией и не являются публичной офертой.", "gallery_title": "Работы и услуги", "gallery": ["https://cachizer1.2gis.com/market/35490d52-4201-4351-a442-11109ec43c61.png?h=720&w=720", "https://cachizer3.2gis.com/market/8961dff7-0fbb-40ec-acc2-c1a3ec914f54.png?h=720&w=720", "https://cachizer2.2gis.com/market/366be840-7e09-47d4-b76b-82f1197e9a7a.png?h=720&w=720", "https://cachizer3.2gis.com/market/1eab016b-260d-4397-9849-c11c9ef53082.png?h=720&w=720", "https://cachizer3.2gis.com/market/cc36b07c-5043-46c4-8cb3-daaaf959fd20.png?h=720&w=720", "https://cachizer3.2gis.com/market/63b0df71-df01-4e36-83bc-4096799234d4.png?h=720&w=720", "https://cachizer3.2gis.com/market/f5e3dad2-1d7c-4024-85d5-765e9e3b1cfb.png?h=720&w=720", "https://cachizer1.2gis.com/market/a2dbe01c-e536-4afd-9803-77091943a9f2.png?h=720&w=720", "https://cachizer1.2gis.com/market/22b3f1bb-67e4-4a70-8701-20ca234f5363.png?h=720&w=720", "https://cachizer3.2gis.com/market/ed58d849-fde4-4981-94bb-e274c44c3e71.png?h=720&w=720", "https://cachizer2.2gis.com/market/613545af-b743-448a-9dad-b9d747907d82.jpg?h=720&w=720", "https://cachizer3.2gis.com/market/3b679f53-aff6-4564-a171-b3f43d7c693f.png?h=720&w=720"], "reviews": {"title": "Нам пишут", "lead": "Пересказ отзывов из 2ГИС. Нажмите на карточку, чтобы прочитать оригиналы.", "points": ["Пишут о вежливом и приятном общении.", "Хвалят аккуратную работу: ровное покрытие и чистая кутикула.", "Многие ходят сюда постоянно, годами.", "Отмечают, что работают быстро, без потери качества.", "Хвалят мастеров: внимательные и знают своё дело.", "Пока идёт процедура, угощают кофе или чаем."], "url": "https://2gis.ru/krasnoyarsk/firm/70000001039543946/tab/reviews"}, "cta_title": "Пора обновить маникюр", "cta_text": "Ежедневно 09:00–21:00. Оплата картой, наличными, переводом.", "cta_script": "ждём вас ♡", "contacts": {"phones": ["+7 (923) 668-30-00"], "address": "Красноярск, улица Академика Киренского, 32", "address_short": "улица Академика Киренского, 32", "address_note": "1 этаж", "hours": [["Ежедневно", "09:00–21:00"]], "hours_line": "Ежедневно 09:00–21:00", "hours_note": "по предварительной записи", "booking": "http://n750311.yclients.ru/company/706077/personal/menu?o=", "wa": "https://wa.me/79236683000", "tg": "https://t.me/+79236683000", "vk": "https://vk.ru/pronails24", "gis": "https://2gis.ru/krasnoyarsk/firm/70000001039543946", "lat": 55.998223, "lon": 92.798291}, "footer_note": "Демо-версия сайта. Данные — из открытой карточки 2ГИС.", "sources": ["https://2gis.ru/krasnoyarsk/firm/70000001039543946"]};</script>
+<script>
+(function () {
+  var C = window.CONTENT, S = document.documentElement.dataset.style;
+  var e = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var k = C.contacts || {}, b = C.brand, h = C.hero;
+  var book = k.booking || k.wa || k.tg || ("tel:" + (k.phones || [""])[0]);
+  var bookLabel = k.booking ? "Записаться онлайн" : k.wa ? "Записаться в WhatsApp" : "Записаться";
+  var stars = function (v) { var n = Math.round(Number(v) || 0); return "★★★★★".slice(0, n) + "☆☆☆☆☆".slice(0, 5 - n); };
+  var rating = C.rating && C.rating.value ? C.rating : null;
+  var out = [];
+
+  out.push('<header class="top" id="top"><div class="wrap"><a class="logo" href="#">' + e(b.name) + '<small>' + e(b.kind) + '</small></a>' +
+    '<nav class="menu"><a href="#services">Услуги</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>' +
+    '<a class="btn" href="' + e(book) + '" target="_blank" rel="noopener">Записаться</a></div></header>');
+
+  // ---- hero per style ----
+  var metaRow = '<div class="meta up d3">' + (rating ? '<span><span class="stars">' + stars(rating.value) + '</span> <b>' + e(rating.value) + '</b> · ' + e(rating.label) + '</span>' : '') +
+    (k.hours_line ? '<span>' + e(k.hours_line) + '</span>' : '') + '<span>' + e(k.address_short || k.address) + '</span></div>';
+  var acts = '<a class="btn" href="' + e(book) + '" target="_blank" rel="noopener">' + e(bookLabel) + ' <span class="arr">→</span></a>' +
+    '<a class="btn ghost" href="#prices">Цены</a>';
+  if (S === "mono") {
+    out.push('<section class="hero"><div class="photo"><img src="' + e(h.photo) + '" alt=""><div class="brand up">' + e(b.name) + '<small>' + e(b.city) + '</small></div></div>' +
+      '<div class="giant">' + e(h.giant) + '</div><div class="wrap"><div class="under"><p class="up d1">' + e(h.text) + '</p><div class="act up d2">' + acts + '</div></div>' + metaRow + '</div></section>');
+  } else if (S === "blush") {
+    out.push('<section class="hero"><div class="wrap grid"><div><p class="kicker up">' + e(h.kicker) + '</p><h1 class="up d1">' + e(h.title) + ' <em>' + e(h.title2) + '</em></h1>' +
+      '<p class="lead up d2">' + e(h.text) + '</p><div class="up d2" style="display:flex;gap:12px;flex-wrap:wrap">' + acts + '</div>' +
+      '<div class="chips up d3">' + (h.chips || []).map(function (c) { return '<div><b>' + e(c[0]) + '</b>' + e(c[1]) + '</div>'; }).join("") + '</div></div>' +
+      '<div class="photo up d1"><img src="' + e(h.photo) + '" alt=""></div></div><span class="script" style="right:6%;top:110px">' + e(h.script) + '</span></section>');
+  } else if (S === "luxe") {
+    out.push('<section class="hero"><div class="bgph"><img src="' + e(h.photo) + '" alt=""></div><div class="wrap"><p class="kicker up">' + e(h.kicker) + '</p>' +
+      '<h1 class="up d1">' + e(h.title) + '<br>' + e(h.title2) + '</h1><div class="rule up d2"></div><p class="lead up d2">' + e(h.text) + '</p>' +
+      '<div class="up d3" style="display:flex;gap:12px;flex-wrap:wrap">' + acts + '</div>' + metaRow + '</div>' +
+      '<div class="seal"><small>' + e(b.name) + ' · ' + e(b.city) + ' ·</small>' + e(b.name.charAt(0)) + '</div></section>');
+  } else {
+    var parts = (h.big || b.name).split("|");
+    out.push('<section class="hero"><div class="bgph"><img src="' + e(h.photo) + '" alt=""></div><div class="frame"><div class="panel">' +
+      '<div><p class="kicker up">' + e(h.kicker) + '</p><h1 class="up d1" style="font-size:clamp(26px,3vw,38px);color:#fff;font-weight:300">' + e(h.title) + ' ' + e(h.title2) + '</h1><p class="up d2">' + e(h.text) + '</p></div>' +
+      '<div class="up d3"><div class="num">' + (rating ? e(rating.value) : "01") + '</div><p style="margin:6px 0 18px">' + (rating ? e(rating.label) : "") + '</p><div style="display:flex;gap:10px;flex-wrap:wrap">' + acts + '</div></div>' +
+      '</div><div></div></div><div class="big"><span>' + e(parts[0]) + '</span><span>' + e(parts[1] || "") + '</span></div></section>');
+  }
+
+  // ---- services ----
+  var sv = C.services || [];
+  if (sv.length) out.push('<section id="services"><div class="wrap"><div class="sec-head rv"><div><p class="kicker">' + e(C.services_kicker || "Услуги") + '</p><h2>' + e(C.services_title) + '</h2></div><p>' + e(C.services_lead) + '</p></div>' +
+    '<div class="cards">' + sv.map(function (s, i) { return '<div class="card rv d' + (i % 4) + '"><div class="ph">' + (s.img ? '<img loading="lazy" src="' + e(s.img) + '" alt="' + e(s.name) + '">' : '<span class="n">0' + (i + 1) + '</span>') + '</div>' +
+      '<div class="body"><h3>' + e(s.name) + '</h3>' + (s.text ? '<p>' + e(s.text) + '</p>' : '') + '<div class="price">' + e(s.price || "Цена после консультации") + '</div></div></div>'; }).join("") + '</div></div></section>');
+
+  // ---- band: why us ----
+  var f = C.features || [];
+  if (f.length) out.push('<section class="band"><div class="wrap grid2"><div class="rv"><p class="kicker">' + e(C.why_kicker || "Почему мы") + '</p><h2 data-n="' + f.length + '">' + e(C.why_title) + '</h2>' +
+    '<div class="feats">' + f.map(function (x) { return '<div><div class="ic">' + e(x.icon || "✦") + '</div><h3>' + e(x.title) + '</h3><p>' + e(x.text) + '</p></div>'; }).join("") + '</div>' +
+    ((C.tags || []).length ? '<div class="tags">' + C.tags.map(function (t) { return '<span>' + e(t) + '</span>'; }).join("") + '</div>' : '') + '</div>' +
+    '<div class="photo rv d2"><img loading="lazy" src="' + e(C.why_photo || h.photo) + '" alt=""></div></div></section>');
+
+  // ---- prices ----
+  var pg = C.prices || [];
+  out.push('<section id="prices"><div class="wrap"><div class="sec-head rv"><div><p class="kicker">Прайс</p><h2>' + e(C.prices_title || "Цены") + '</h2></div><p>' + e(C.prices_note) + '</p></div>' +
+    (pg.length ? '<div class="prices">' + pg.map(function (g) { return '<div class="price-group rv"><h3>' + e(g.cat) + '</h3>' + g.items.map(function (r) { return '<div class="row"><span>' + e(r.name) + '</span><span class="dots"></span><b>' + e(r.price) + '</b></div>'; }).join("") + '</div>'; }).join("") + '</div>'
+      : '<p class="note rv">Стоимость зависит от длины, дизайна и состояния ногтей — мастер назовёт цену до начала работы.</p>') + '</div></section>');
+
+  // ---- gallery ----
+  if ((C.gallery || []).length > 2) out.push('<section style="padding-top:0"><div class="wrap"><div class="sec-head rv"><div><p class="kicker">Фото</p><h2>' + e(C.gallery_title || "Наши работы") + '</h2></div></div>' +
+    '<div class="strip rv">' + C.gallery.map(function (u) { return '<img loading="lazy" src="' + e(u) + '" alt="">'; }).join("") + '</div></div></section>');
+
+  // ---- reviews ----
+  var rv = C.reviews || {};
+  if ((rv.points || []).length) out.push('<section id="reviews" class="' + (S === "luxe" ? "" : "") + '"><div class="wrap"><div class="sec-head rv"><div><p class="kicker">Отзывы</p><h2>' + e(rv.title) + '</h2></div><p>' + e(rv.lead) + '</p></div>' +
+    '<div class="rev-grid">' + (rating ? '<a class="score rv" href="' + e(rv.url) + '" target="_blank" rel="noopener"><div class="v">' + e(rating.value) + '</div><div class="stars">' + stars(rating.value) + '</div><p>' + e(rating.label) + '</p><span class="go">Читать в 2ГИС →</span></a>' : '<div></div>') +
+    '<div class="points">' + rv.points.map(function (p, i) { return '<a class="point rv d' + (i % 3) + '" href="' + e(rv.url) + '" target="_blank" rel="noopener"><q>' + e(p) + '</q><small>Из отзывов в 2ГИС</small></a>'; }).join("") + '</div></div></div></section>');
+
+  // ---- CTA ----
+  out.push('<section class="cta' + (S === "mono" || S === "glass" ? " band" : "") + '"><div class="wrap rv">' + (S === "blush" ? '<span class="script">' + e(C.cta_script || "ждём вас") + '</span>' : '') +
+    '<h2>' + e(C.cta_title) + '</h2><p>' + e(C.cta_text) + '</p><a class="btn" href="' + e(book) + '" target="_blank" rel="noopener"' + (S === "mono" || S === "glass" ? ' style="background:var(--on2);color:var(--bg2);border-color:var(--on2)"' : '') + '>' + e(bookLabel) + ' <span class="arr">→</span></a></div></section>');
+
+  // ---- contacts ----
+  var ms = [];
+  if (k.wa) ms.push('<a class="btn ghost" href="' + e(k.wa) + '" target="_blank" rel="noopener">WhatsApp</a>');
+  if (k.tg) ms.push('<a class="btn ghost" href="' + e(k.tg) + '" target="_blank" rel="noopener">Telegram</a>');
+  if (k.vk) ms.push('<a class="btn ghost" href="' + e(k.vk) + '" target="_blank" rel="noopener">ВКонтакте</a>');
+  var map = k.lat ? '<iframe loading="lazy" title="Карта" src="https://yandex.ru/map-widget/v1/?ll=' + k.lon + '%2C' + k.lat + '&z=16&pt=' + k.lon + '%2C' + k.lat + '%2Cpm2rdm"></iframe>' : '';
+  out.push('<section id="contacts"><div class="wrap"><div class="sec-head rv"><div><p class="kicker">Контакты</p><h2>Как нас найти</h2></div></div><div class="contact"><div class="rv"><dl>' +
+    '<div><dt>Адрес</dt><dd>' + e(k.address) + (k.address_note ? '<br><span class="note">' + e(k.address_note) + '</span>' : '') + '</dd></div>' +
+    ((k.phones || []).length ? '<div><dt>Телефон</dt><dd>' + k.phones.map(function (p) { return '<a href="tel:' + e(p.replace(/[^+\d]/g, "")) + '">' + e(p) + '</a>'; }).join("<br>") + '</dd></div>' : '') +
+    ((k.hours || []).length ? '<div><dt>Часы работы</dt><dd><div class="hours">' + k.hours.map(function (r) { return '<span>' + e(r[0]) + '</span><span>' + e(r[1]) + '</span>'; }).join("") + '</div>' + (k.hours_note ? '<span class="note">' + e(k.hours_note) + '</span>' : '') + '</dd></div>' : '') +
+    '</dl><div class="msgr">' + ms.join("") + '</div></div><div class="map rv d1">' + map + '</div></div></div></section>');
+
+  // ---- footer ----
+  out.push('<footer><div class="wrap"><div class="cols"><div><a class="logo" href="#">' + e(b.name) + '<small>' + e(b.kind) + '</small></a><p class="note">' + e(k.address) + '</p></div>' +
+    '<div><h4>Разделы</h4><a href="#services">Услуги</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></div>' +
+    '<div><h4>Связаться</h4>' + (k.phones || []).slice(0, 2).map(function (p) { return '<a href="tel:' + e(p.replace(/[^+\d]/g, "")) + '">' + e(p) + '</a>'; }).join("") +
+    (k.wa ? '<a href="' + e(k.wa) + '" target="_blank" rel="noopener">WhatsApp</a>' : '') + (k.tg ? '<a href="' + e(k.tg) + '" target="_blank" rel="noopener">Telegram</a>' : '') + (k.vk ? '<a href="' + e(k.vk) + '" target="_blank" rel="noopener">ВКонтакте</a>' : '') + '</div>' +
+    '<div><h4>Запись</h4>' + (k.booking ? '<a href="' + e(k.booking) + '" target="_blank" rel="noopener">Онлайн-запись</a>' : '') + '<a href="' + e(k.gis) + '" target="_blank" rel="noopener">Мы в 2ГИС</a>' + (k.hours_line ? '<p class="note">' + e(k.hours_line) + '</p>' : '') + '</div></div>' +
+    '<div class="legal"><span>© ' + new Date().getFullYear() + ' ' + e(b.name) + ', ' + e(b.city) + '</span><span>' + e(C.footer_note) + '</span></div></div></footer>');
+  out.push('<div class="mbar"><a href="' + e("tel:" + ((k.phones || [""])[0]).replace(/[^+\d]/g, "")) + '">Позвонить</a><a href="' + e(book) + '" target="_blank" rel="noopener">Записаться</a></div>');
+
+  document.getElementById("app").innerHTML = out.join("");
+
+  // header becomes solid after the first screen; scroll reveals
+  var top = document.getElementById("top");
+  var onScroll = function () { top.classList.toggle("solid", window.scrollY > 60); };
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  var io = "IntersectionObserver" in window ? new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { threshold: .12 }) : null;
+  document.querySelectorAll(".rv").forEach(function (el) { io ? io.observe(el) : el.classList.add("in"); });
+  // a broken photo should not leave an empty frame
+  document.querySelectorAll("img").forEach(function (im) { im.addEventListener("error", function () { var c = im.closest(".card .ph, .strip"); if (im.closest(".strip")) im.remove(); else im.style.visibility = "hidden"; }); });
+})();
+</script>
+</body>
+</html>
