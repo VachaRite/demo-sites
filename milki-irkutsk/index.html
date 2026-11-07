@@ -10,15 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&family=Unbounded:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
 /* ---------- tokens per style (references: Monotone, Nailé, Luxé, Iceland) ---------- */
-:root { --accent: #c2185b; --max: 1200px; --gut: clamp(16px, 4vw, 40px); }
+:root { --accent: #c2185b; --max: 1760px; --gut: clamp(16px, 2.6vw, 44px); }
 [data-style="mono"]  { --bg:#f3eee6; --bg2:#1a1a1a; --ink:#141414; --ink2:#5d5a55; --line:#141414; --card:#fffdf8; --on2:#f3eee6;
   --head:"Oswald", Impact, sans-serif; --body:"Manrope", system-ui, sans-serif; --r:0px; --upper:uppercase; --hw:700; --track:-.01em; }
 [data-style="blush"] { --bg:#fbf5f3; --bg2:#f3e3df; --ink:#2b2023; --ink2:#7b6a6d; --line:#ecd9d4; --card:#ffffff; --on2:#2b2023;
   --head:"Cormorant Garamond", Georgia, serif; --body:"Manrope", system-ui, sans-serif; --r:18px; --upper:none; --hw:500; --track:-.01em; }
 [data-style="luxe"]  { --bg:#0f0d0c; --bg2:#e9ddcc; --ink:#f1e9de; --ink2:#a99c8c; --line:#3a332d; --card:#181513; --on2:#1b1714;
   --head:"Cormorant Garamond", Georgia, serif; --body:"Manrope", system-ui, sans-serif; --r:2px; --upper:uppercase; --hw:300; --track:.02em; }
-[data-style="glass"] { --bg:#eef1f2; --bg2:#202629; --ink:#1b2024; --ink2:#5f6a70; --line:#d4dadd; --card:rgba(255,255,255,.72); --on2:#eef1f2;
-  --head:"Unbounded", system-ui, sans-serif; --body:"Manrope", system-ui, sans-serif; --r:22px; --upper:uppercase; --hw:200; --track:.04em; }
+[data-style="glass"] { --bg:#1d2226; --bg2:rgba(255,255,255,.1); --ink:#ffffff; --ink2:rgba(255,255,255,.74); --line:rgba(255,255,255,.26); --card:rgba(255,255,255,.12); --on2:#ffffff;
+  --head:"Unbounded", system-ui, sans-serif; --body:"Manrope", system-ui, sans-serif; --r:22px; --upper:uppercase; --hw:200; --track:.04em; --max:100%; }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -34,9 +34,9 @@ h2 { font-size: clamp(34px, 5.2vw, 64px); }
 .btn:hover { transform: translateY(-2px); }
 .btn.ghost { background: transparent; color: var(--ink); }
 .btn .arr { transition: transform .2s; } .btn:hover .arr { transform: translateX(4px); }
-section { padding: clamp(64px, 9vw, 120px) 0; }
-.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
-.sec-head p { max-width: 420px; color: var(--ink2); margin: 0; }
+section { padding: clamp(48px, 5.5vw, 88px) 0; }
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+.sec-head p { max-width: 520px; color: var(--ink2); margin: 0; }
 
 /* ---------- header ---------- */
 header.top { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
@@ -114,12 +114,50 @@ header.top.solid { background: color-mix(in srgb, var(--bg) 92%, transparent); b
 [data-style="glass"] .hero .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.6); }
 [data-style="glass"] header.top:not(.solid) { color: #fff; } [data-style="glass"] header.top:not(.solid) .logo small { color: rgba(255,255,255,.75); }
 [data-style="glass"] header.top:not(.solid) .btn { background: #fff; color: #1b2024; border-color: #fff; }
-[data-style="glass"] .card, [data-style="glass"] .price-group { backdrop-filter: blur(10px); }
+/* glass: the whole page continues the first screen - same photo, blurred, behind frosted panels */
+[data-style="glass"] body { background: #1d2226; }
+[data-style="glass"] body::before { content: ""; position: fixed; inset: -60px; z-index: -1; background: var(--photo) center / cover no-repeat; filter: blur(46px) saturate(1.15) brightness(.5); }
+[data-style="glass"] .card, [data-style="glass"] .price-group, [data-style="glass"] .score, [data-style="glass"] .point,
+[data-style="glass"] .glass-panel, [data-style="glass"] footer .cols, [data-style="glass"] .map {
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.28); border-radius: 26px;
+  backdrop-filter: blur(22px) saturate(1.2); -webkit-backdrop-filter: blur(22px) saturate(1.2); }
+[data-style="glass"] .card .ph { margin: 10px 10px 0; border-radius: 18px; }
+[data-style="glass"] .card .ph .n { color: #fff; }
+[data-style="glass"] .card .price { color: #fff; font-weight: 600; }
+[data-style="glass"] .card .price::before { content: ""; display: inline-block; width: 18px; height: 1px; background: rgba(255,255,255,.7); vertical-align: middle; margin-right: 10px; }
+[data-style="glass"] h2 { font-weight: 200; }
+[data-style="glass"] .kicker { color: rgba(255,255,255,.8); }
+[data-style="glass"] .btn { background: #fff; color: #1b2024; border-color: #fff; }
+[data-style="glass"] .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.6); }
+[data-style="glass"] header.top.solid { background: rgba(24,28,32,.42); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); box-shadow: 0 1px 0 rgba(255,255,255,.18); }
+/* "why" band = a second hero-like frame: frosted panel on the left, photo on the right */
+[data-style="glass"] .band { background: transparent; }
+[data-style="glass"] .band .grid2 { grid-template-columns: minmax(300px, 46%) 1fr; gap: 0; border-radius: 26px; overflow: hidden; border: 1px solid rgba(255,255,255,.28); align-items: stretch; }
+[data-style="glass"] .band .grid2 > div:first-child { background: rgba(255,255,255,.12); backdrop-filter: blur(22px) saturate(1.2); -webkit-backdrop-filter: blur(22px) saturate(1.2); padding: clamp(28px, 3vw, 48px); }
+[data-style="glass"] .band .photo { aspect-ratio: auto; min-height: 420px; border-radius: 0; }
+[data-style="glass"] .feats .ic { border-color: rgba(255,255,255,.5); color: #fff; }
+[data-style="glass"] .tags span { border-color: rgba(255,255,255,.4); background: rgba(255,255,255,.08); }
+[data-style="glass"] .price-group h3 { font-weight: 300; font-size: 20px; }
+[data-style="glass"] .row b { font-weight: 500; }
+[data-style="glass"] .score .v { font-weight: 200; }
+[data-style="glass"] .point q { font-size: 17px; }
+/* CTA = frame with the photo, like the first screen */
+[data-style="glass"] .cta.band { padding-left: var(--gut); padding-right: var(--gut); }
+[data-style="glass"] .cta .wrap { position: relative; border-radius: 26px; overflow: hidden; border: 1px solid rgba(255,255,255,.3); padding: clamp(48px, 7vw, 110px) 24px; isolation: isolate; }
+[data-style="glass"] .cta .wrap::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.15)), var(--photo) center / cover; }
+[data-style="glass"] .cta .wrap::after { content: ""; position: absolute; inset: 0; z-index: -1; backdrop-filter: blur(6px); }
+[data-style="glass"] .contact { gap: 16px; }
+[data-style="glass"] .contact > div:first-child { padding: clamp(24px, 3vw, 40px); }
+[data-style="glass"] footer { border-top: 0; padding-top: 0; }
+[data-style="glass"] footer .cols { padding: 32px; }
+[data-style="glass"] footer .legal { border-top-color: rgba(255,255,255,.2); }
+@media (max-width: 860px) { [data-style="glass"] .band .grid2 { grid-template-columns: 1fr; } [data-style="glass"] .band .photo { min-height: 280px; } }
 @media (max-width: 860px) { [data-style="glass"] .hero .frame { grid-template-columns: 1fr; } [data-style="glass"] .hero .panel { margin-top: 34vh; } [data-style="glass"] .hero .big { left: calc(var(--gut) + 20px); right: calc(var(--gut) + 20px); top: 120px; bottom: auto; text-align: left; } }
 [data-style="luxe"] header.top .btn, [data-style="mono"] header.top .btn { border-radius: var(--r); }
 
 /* ---------- services: photo cards ---------- */
-.cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+@media (min-width: 1300px) { .cards { grid-template-columns: repeat(var(--cols, 4), 1fr); } }
 .card { background: var(--card); border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); transition: transform .35s, box-shadow .35s; display: flex; flex-direction: column; }
 .card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px -28px rgba(0,0,0,.35); }
 .card .ph { aspect-ratio: 1/1; background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 30%, var(--bg)) 0%, var(--bg2) 100%); overflow: hidden; position: relative; }
@@ -150,8 +188,8 @@ header.top.solid { background: color-mix(in srgb, var(--bg) 92%, transparent); b
 [data-style="mono"] .band h2::after { content: "(" attr(data-n) ")"; font-size: .3em; vertical-align: super; margin-left: 6px; }
 
 /* ---------- price list ---------- */
-.prices { columns: 2 380px; column-gap: 40px; }
-.price-group { break-inside: avoid; margin: 0 0 34px; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 24px 26px; }
+.prices { columns: 3 360px; column-gap: 20px; }
+.price-group { break-inside: avoid; margin: 0 0 20px; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 24px 26px; }
 .price-group h3 { font-size: 24px; margin-bottom: 12px; }
 [data-style="blush"] .price-group h3 { font-weight: 600; }
 .row { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; font-size: 15px; }
@@ -161,16 +199,18 @@ header.top.solid { background: color-mix(in srgb, var(--bg) 92%, transparent); b
 [data-style="mono"] .price-group { background: transparent; border: 0; border-top: 2px solid var(--ink); border-radius: 0; padding: 18px 0; }
 
 /* ---------- gallery strip ---------- */
-.strip { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: thin; }
-.strip img { height: 300px; width: auto; aspect-ratio: 1/1; object-fit: cover; border-radius: var(--r); scroll-snap-align: start; flex: none; }
-[data-style="luxe"] .strip img { aspect-ratio: 3/4; height: 360px; }
+/* gallery fills the whole row: few photos get wide, many photos wrap into an even grid */
+.strip { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.strip img { width: 100%; height: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: var(--r); }
+.strip.few img { aspect-ratio: 4/3; }
+[data-style="luxe"] .strip img { aspect-ratio: 3/4; }
 
 /* ---------- reviews ---------- */
 .rev-grid { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; }
 .score { border: 1px solid var(--line); border-radius: var(--r); padding: 30px; text-align: center; background: var(--card); text-decoration: none; display: block; }
 .score .v { font: var(--hw) 72px/1 var(--head); } .score .stars { font-size: 20px; } .score p { color: var(--ink2); margin: 8px 0 0; font-size: 14px; }
 .score .go { display: inline-block; margin-top: 16px; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
-.points { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.points { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
 .point { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 22px 20px; text-decoration: none; display: block; transition: border-color .2s, transform .2s; }
 .point:hover { border-color: var(--accent); transform: translateY(-3px); }
 .point q { display: block; quotes: none; font-size: 16px; } .point small { display: block; margin-top: 12px; color: var(--ink2); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
@@ -230,6 +270,7 @@ footer .legal { margin-top: 34px; padding-top: 20px; border-top: 1px solid var(-
   var stars = function (v) { var n = Math.round(Number(v) || 0); return "★★★★★".slice(0, n) + "☆☆☆☆☆".slice(0, 5 - n); };
   var rating = C.rating && C.rating.value ? C.rating : null;
   var out = [];
+  if (h.photo) document.documentElement.style.setProperty("--photo", 'url("' + h.photo.replace(/"/g, "") + '")');
 
   out.push('<header class="top" id="top"><div class="wrap"><a class="logo" href="#">' + e(b.name) + '<small>' + e(b.kind) + '</small></a>' +
     '<nav class="menu"><a href="#services">Услуги</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>' +
@@ -264,7 +305,7 @@ footer .legal { margin-top: 34px; padding-top: 20px; border-top: 1px solid var(-
   // ---- services ----
   var sv = C.services || [];
   if (sv.length) out.push('<section id="services"><div class="wrap"><div class="sec-head rv"><div><p class="kicker">' + e(C.services_kicker || "Услуги") + '</p><h2>' + e(C.services_title) + '</h2></div><p>' + e(C.services_lead) + '</p></div>' +
-    '<div class="cards">' + sv.map(function (s, i) { return '<div class="card rv d' + (i % 4) + '"><div class="ph">' + (s.img ? '<img loading="lazy" src="' + e(s.img) + '" alt="' + e(s.name) + '">' : '<span class="n">0' + (i + 1) + '</span>') + '</div>' +
+    '<div class="cards" style="--cols:' + (sv.length <= 5 ? sv.length : sv.length === 6 ? 3 : 4) + '">' + sv.map(function (s, i) { return '<div class="card rv d' + (i % 4) + '"><div class="ph">' + (s.img ? '<img loading="lazy" src="' + e(s.img) + '" alt="' + e(s.name) + '">' : '<span class="n">0' + (i + 1) + '</span>') + '</div>' +
       '<div class="body"><h3>' + e(s.name) + '</h3>' + (s.text ? '<p>' + e(s.text) + '</p>' : '') + '<div class="price">' + e(s.price || "Цена после консультации") + '</div></div></div>'; }).join("") + '</div></div></section>');
 
   // ---- band: why us ----
@@ -282,7 +323,7 @@ footer .legal { margin-top: 34px; padding-top: 20px; border-top: 1px solid var(-
 
   // ---- gallery ----
   if ((C.gallery || []).length > 2) out.push('<section style="padding-top:0"><div class="wrap"><div class="sec-head rv"><div><p class="kicker">Фото</p><h2>' + e(C.gallery_title || "Наши работы") + '</h2></div></div>' +
-    '<div class="strip rv">' + C.gallery.map(function (u) { return '<img loading="lazy" src="' + e(u) + '" alt="">'; }).join("") + '</div></div></section>');
+    '<div class="strip rv' + (C.gallery.length < 5 ? ' few' : '') + '">' + C.gallery.map(function (u) { return '<img loading="lazy" src="' + e(u) + '" alt="">'; }).join("") + '</div></div></section>');
 
   // ---- reviews ----
   var rv = C.reviews || {};
@@ -300,7 +341,7 @@ footer .legal { margin-top: 34px; padding-top: 20px; border-top: 1px solid var(-
   if (k.tg) ms.push('<a class="btn ghost" href="' + e(k.tg) + '" target="_blank" rel="noopener">Telegram</a>');
   if (k.vk) ms.push('<a class="btn ghost" href="' + e(k.vk) + '" target="_blank" rel="noopener">ВКонтакте</a>');
   var map = k.lat ? '<iframe loading="lazy" title="Карта" src="https://yandex.ru/map-widget/v1/?ll=' + k.lon + '%2C' + k.lat + '&z=16&pt=' + k.lon + '%2C' + k.lat + '%2Cpm2rdm"></iframe>' : '';
-  out.push('<section id="contacts"><div class="wrap"><div class="sec-head rv"><div><p class="kicker">Контакты</p><h2>Как нас найти</h2></div></div><div class="contact"><div class="rv"><dl>' +
+  out.push('<section id="contacts"><div class="wrap"><div class="sec-head rv"><div><p class="kicker">Контакты</p><h2>Как нас найти</h2></div></div><div class="contact"><div class="rv glass-panel"><dl>' +
     '<div><dt>Адрес</dt><dd>' + e(k.address) + (k.address_note ? '<br><span class="note">' + e(k.address_note) + '</span>' : '') + '</dd></div>' +
     ((k.phones || []).length ? '<div><dt>Телефон</dt><dd>' + k.phones.map(function (p) { return '<a href="tel:' + e(p.replace(/[^+\d]/g, "")) + '">' + e(p) + '</a>'; }).join("<br>") + '</dd></div>' : '') +
     ((k.hours || []).length ? '<div><dt>Часы работы</dt><dd><div class="hours">' + k.hours.map(function (r) { return '<span>' + e(r[0]) + '</span><span>' + e(r[1]) + '</span>'; }).join("") + '</div>' + (k.hours_note ? '<span class="note">' + e(k.hours_note) + '</span>' : '') + '</dd></div>' : '') +
