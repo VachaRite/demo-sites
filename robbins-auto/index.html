@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" data-style="bold" style="--accent: #c8102e; --on-accent: #fff;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robbins Auto Repair &amp; Sales | Family auto repair in Rochester, NH</title>
+<meta name="description" content="Family-owned auto repair and car sales at 20 Summer St, Rochester, NH. Honest pricing, no pressure. 5.0 on Google. Call (603) 948-1032.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Three looks for foreign demos, picked per site in build_intl.py:
+   atelier - black, cinematic photo, editorial serif (ref: Forge Automotive)
+   mono    - light grey, giant wordmark, black bands, square buttons (ref: STANQ)
+   bold    - white, condensed caps, rounded photo panel with a notch, pill chips (ref: MLK logistics) */
+:root { --accent: #e30613; --on-accent: #fff; --wrap: 1240px; --r: 0px;
+  --bg: #0a0a0a; --ink: #f4f2ee; --muted: rgba(244,242,238,.62); --line: rgba(255,255,255,.12); --panel: #141414; --panel-ink: #f4f2ee;
+  --head: "Instrument Serif", Georgia, serif; --body: "Inter", system-ui, sans-serif; --hw: 400; --case: none; --track: -.01em; }
+[data-style="mono"] { --bg: #e9e8e4; --ink: #0e0e0e; --muted: #5d5d5a; --line: rgba(0,0,0,.14); --panel: #0e0e0e; --panel-ink: #f2f1ed;
+  --head: "Archivo", system-ui, sans-serif; --hw: 800; --case: uppercase; --track: -.02em; }
+[data-style="bold"] { --bg: #ffffff; --ink: #111; --muted: #5f6368; --line: rgba(0,0,0,.1); --panel: #f4f4f2; --panel-ink: #111; --r: 28px;
+  --head: "Bebas Neue", "Archivo", sans-serif; --hw: 400; --case: uppercase; --track: 0; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 var(--body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+h1, h2, h3 { font-family: var(--head); font-weight: var(--hw); text-transform: var(--case); letter-spacing: var(--track); line-height: .98; margin: 0; }
+[data-style="mono"] h1, [data-style="mono"] h2 { font-stretch: 112%; }
+h2 { font-size: clamp(34px, 5vw, 64px); }
+[data-style="bold"] h2 { font-size: clamp(40px, 6vw, 76px); line-height: .92; }
+.kicker { display: inline-flex; align-items: center; gap: 10px; font: 600 12px/1 var(--body); letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+.kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.muted { color: var(--muted); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 26px; border: 1px solid transparent; font: 600 14px/1 var(--body); letter-spacing: .04em; text-decoration: none; cursor: pointer; transition: transform .2s, background .2s, color .2s; border-radius: 999px; }
+.btn:hover { transform: translateY(-2px); }
+.btn svg { width: 16px; height: 16px; }
+.btn-accent { background: var(--accent); color: var(--on-accent); }
+.btn-line { border-color: currentColor; background: transparent; }
+[data-style="mono"] .btn { border-radius: 0; text-transform: uppercase; font-size: 12px; letter-spacing: .14em; }
+[data-style="mono"] .btn-accent { background: var(--ink); color: var(--bg); }
+[data-style="bold"] .btn::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; margin-left: 6px; }
+[data-style="bold"] .btn svg { display: none; }
+
+/* header */
+header { position: fixed; inset: 0 0 auto; z-index: 40; transition: background .3s, backdrop-filter .3s; }
+header .wrap { display: flex; align-items: center; gap: 28px; height: 76px; }
+header.scrolled { background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.logo { text-decoration: none; display: flex; align-items: center; gap: 10px; font: 700 15px/1.1 var(--body); letter-spacing: .02em; }
+.logo img { height: 40px; width: auto; }
+.logo small { display: block; font-weight: 500; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+nav { display: flex; gap: 26px; margin-left: auto; font-size: 14px; }
+nav a { text-decoration: none; opacity: .8; } nav a:hover { opacity: 1; }
+.hphone { font-weight: 600; text-decoration: none; white-space: nowrap; }
+[data-style="atelier"] header:not(.scrolled), [data-style="atelier"] header:not(.scrolled) .logo small { color: #fff; }
+[data-style="atelier"] .logo { font: 400 22px/1 var(--head); letter-spacing: .02em; }
+[data-style="mono"] header { background: #0e0e0e; color: #f2f1ed; } [data-style="mono"] header .logo small { color: rgba(242,241,237,.6); }
+[data-style="mono"] .topline { background: var(--accent); color: var(--on-accent); font-size: 12px; letter-spacing: .06em; }
+[data-style="mono"] .topline .wrap { height: 30px; display: flex; align-items: center; justify-content: space-between; }
+[data-style="mono"] header { inset: 0 0 auto; }
+[data-style="bold"] nav { background: var(--panel); border-radius: 999px; padding: 12px 22px; }
+
+/* hero: atelier */
+.hero { position: relative; }
+[data-style="atelier"] .hero { min-height: 100svh; display: grid; place-items: center; text-align: center; overflow: hidden; color: #fff; background: #000; }
+[data-style="atelier"] .hero .bg { position: absolute; inset: 0; background-size: cover; background-position: center; transform: scale(1.06); animation: zoom 14s ease-out forwards; }
+[data-style="atelier"] .hero .bg::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 60%, rgba(0,0,0,.25), rgba(0,0,0,.82) 75%), linear-gradient(to bottom, rgba(0,0,0,.55), transparent 30%, transparent 60%, #0a0a0a); }
+@keyframes zoom { to { transform: scale(1); } }
+[data-style="atelier"] .hero .hin { position: relative; padding: 110px 24px 80px; max-width: 980px; }
+[data-style="atelier"] .hero h1 { font-size: clamp(48px, min(7.5vw, 11vh), 112px); line-height: .95; }
+[data-style="atelier"] .hero h1 em { display: block; font-style: italic; color: var(--accent); }
+[data-style="atelier"] .hero .sub { max-width: 520px; margin: 22px auto 30px; font-size: 16px; color: rgba(255,255,255,.75); }
+[data-style="atelier"] .hero .eyebrow { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: rgba(255,255,255,.7); margin-bottom: 26px; }
+[data-style="atelier"] .hero .actions { justify-content: center; }
+[data-style="atelier"] .hero .scroll { position: absolute; bottom: 28px; left: 50%; translate: -50% 0; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+[data-style="atelier"] .hero.nophoto .bg { background: radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--accent) 45%, #000), #000 60%); }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* hero: mono */
+[data-style="mono"] .hero { padding-top: 106px; overflow: hidden; }
+[data-style="mono"] .hero .stage { max-width: var(--wrap); margin: 0 auto; padding: 34px 24px 44px; min-height: calc(100svh - 196px); display: flex; flex-direction: column; justify-content: space-between; gap: 26px; }
+[data-style="mono"] .hero .eyebrow { font: 600 12px/1.9 var(--body); letter-spacing: .32em; text-transform: uppercase; max-width: 260px; }
+[data-style="mono"] .hero .eyebrow::after { content: ""; display: block; width: 36px; height: 1px; background: var(--ink); margin-top: 14px; }
+[data-style="mono"] .gw { position: relative; display: flex; justify-content: center; align-items: center; }
+[data-style="mono"] .giant { font: 900 120px/.78 var(--head); font-stretch: 125%; letter-spacing: -.045em; text-transform: uppercase; white-space: nowrap; color: var(--ink); padding: .06em 0; }
+[data-style="mono"] .hero .photo { position: absolute; left: 50%; top: 50%; translate: -50% -50%; height: 165%; max-width: 44%; aspect-ratio: 4/3; object-fit: cover; box-shadow: 0 40px 70px rgba(0,0,0,.35); }
+[data-style="mono"] .hero .bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; }
+[data-style="mono"] .hero .left { max-width: 460px; }
+[data-style="mono"] .hero h1 { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.1; margin-bottom: 12px; }
+[data-style="mono"] .hero h1 em { font-style: normal; color: var(--accent); }
+[data-style="mono"] .hero .sub { font-size: 15px; color: var(--muted); margin: 0 0 22px; }
+[data-style="mono"] .hero .right { text-align: right; font: 600 12px/1.9 var(--body); letter-spacing: .3em; text-transform: uppercase; max-width: 260px; }
+[data-style="mono"] .hero .right::before { content: ""; display: block; width: 36px; height: 1px; background: var(--ink); margin: 0 0 14px auto; }
+[data-style="mono"] .band { background: #0e0e0e; color: #f2f1ed; }
+[data-style="mono"] .band .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+[data-style="mono"] .band a { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 34px 26px; text-decoration: none; border-left: 1px solid rgba(255,255,255,.12); font-size: 17px; transition: background .2s; }
+[data-style="mono"] .band a:first-child { border-left: 0; }
+[data-style="mono"] .band a:hover { background: #1b1b1b; }
+[data-style="mono"] .band a span { font-size: 22px; color: var(--accent); }
+
+/* hero: bold */
+[data-style="bold"] .hero { padding: 100px 0 30px; }
+[data-style="bold"] .hero .panel { position: relative; min-height: 600px; border-radius: var(--r); overflow: hidden; background: #111 center/cover; color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 40px 40px 34px; }
+[data-style="bold"] .hero .panel::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,.1) 60%); }
+[data-style="bold"] .hero.nophoto .panel { background: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--accent) 70%, #111), #111 55%); }
+[data-style="bold"] .hero.nophoto .panel::after { content: attr(data-mark); position: absolute; right: -10px; top: 10px; font: 400 clamp(120px, 22vw, 300px)/.8 var(--head); color: rgba(255,255,255,.07); text-transform: uppercase; white-space: nowrap; }
+[data-style="bold"] .hero h1 { position: relative; z-index: 1; font-size: clamp(56px, 9vw, 132px); line-height: .86; max-width: 1000px; margin-left: auto; text-align: right; }
+[data-style="bold"] .hero h1 em { font-style: normal; display: block; }
+[data-style="bold"] .chips { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; margin-top: 26px; }
+[data-style="bold"] .chips a { border: 1px solid rgba(255,255,255,.6); border-radius: 999px; padding: 10px 20px; font-size: 14px; text-decoration: none; backdrop-filter: blur(6px); }
+[data-style="bold"] .chips a:hover { background: #fff; color: #111; }
+[data-style="bold"] .notch { position: absolute; left: 0; top: 0; z-index: 2; background: var(--bg); color: var(--ink); padding: 26px 36px 30px 28px; border-bottom-right-radius: var(--r); max-width: 380px; }
+[data-style="bold"] .notch::before, [data-style="bold"] .notch::after { content: ""; position: absolute; width: var(--r); height: var(--r); background: radial-gradient(circle at 100% 100%, transparent var(--r), var(--bg) calc(var(--r) + .5px)); }
+[data-style="bold"] .notch::before { right: calc(var(--r) * -1); top: 0; }
+[data-style="bold"] .notch::after { left: 0; bottom: calc(var(--r) * -1); }
+[data-style="bold"] .notch b { display: block; font: 400 34px/.95 var(--head); text-transform: uppercase; }
+[data-style="bold"] .notch b i { font-style: normal; color: var(--accent); }
+[data-style="bold"] .notch p { margin: 12px 0 16px; font-size: 14px; color: var(--muted); }
+[data-style="bold"] .notch .btn { padding: 12px 18px; font-size: 13px; }
+
+/* sections */
+section.s { padding: 110px 0; }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 54px; flex-wrap: wrap; }
+.head p { max-width: 420px; margin: 0; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.stat { padding: 34px 26px; border-left: 1px solid var(--line); }
+.stat:first-child { border-left: 0; }
+.stat b { display: block; font: var(--hw) clamp(40px, 5vw, 64px)/1 var(--head); color: var(--accent); }
+[data-style="mono"] .stat b { color: var(--ink); font-stretch: 112%; }
+.stat span { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); letter-spacing: .04em; }
+
+.svc { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.svc .card { background: var(--bg); padding: 30px 28px 34px; min-height: 190px; display: flex; flex-direction: column; transition: background .25s; }
+.svc .card:hover { background: color-mix(in srgb, var(--accent) 7%, var(--bg)); }
+.svc .n { font: 500 12px/1 var(--body); color: var(--accent); letter-spacing: .12em; margin-bottom: 26px; }
+.svc h3 { font-size: 26px; margin-bottom: 10px; line-height: 1.05; }
+[data-style="atelier"] .svc h3 { font-size: 30px; }
+[data-style="mono"] .svc h3 { font-size: 17px; font-stretch: 110%; letter-spacing: 0; }
+[data-style="bold"] .svc h3 { font-size: 30px; }
+.svc p { margin: 0; color: var(--muted); font-size: 15px; }
+.svc .price { margin-top: auto; padding-top: 22px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; }
+.svc .price a { color: var(--accent); text-decoration: none; font-weight: 600; }
+[data-style="bold"] .svc { background: none; border: 0; gap: 14px; }
+[data-style="bold"] .svc .card { background: var(--panel); border-radius: 22px; }
+
+.why { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
+.why .pic { position: relative; border-radius: var(--r); overflow: hidden; aspect-ratio: 4/5; background: var(--panel); }
+.why .pic img { width: 100%; height: 100%; object-fit: cover; }
+.why ul { list-style: none; margin: 34px 0 0; padding: 0; }
+.why li { padding: 26px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 54px 1fr; gap: 6px 14px; }
+.why li i { font: 500 13px/1.6 var(--body); color: var(--accent); font-style: normal; grid-row: span 2; }
+.why li b { font: var(--hw) 24px/1.1 var(--head); text-transform: var(--case); }
+[data-style="mono"] .why li b { font-size: 16px; font-stretch: 110%; }
+.why li p { margin: 0; color: var(--muted); }
+.why.nopic { grid-template-columns: .9fr 1.1fr; }
+
+.gallery { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 240px; gap: 12px; }
+.gallery figure { margin: 0; overflow: hidden; border-radius: calc(var(--r) * .7); background: var(--panel); grid-column: span 4; }
+.gallery figure:nth-child(5n+1) { grid-column: span 8; grid-row: span 2; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s; }
+.gallery figure:hover img { transform: scale(1.04); }
+
+.dark { background: var(--panel); color: var(--panel-ink); }
+[data-style="atelier"] .dark { background: #111; }
+[data-style="bold"] .dark { background: #111; color: #fff; border-radius: var(--r); margin: 0 24px; }
+.dark .muted, .dark .head p { color: color-mix(in srgb, var(--panel-ink) 62%, transparent); }
+[data-style="bold"] .dark .muted { color: rgba(255,255,255,.62); }
+.reviews { display: grid; grid-template-columns: 300px 1fr; gap: 60px; }
+.score b { font: var(--hw) 110px/1 var(--head); color: var(--accent); }
+.score .st { color: var(--accent); letter-spacing: .2em; font-size: 20px; }
+.points { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.points div { border: 1px solid rgba(255,255,255,.14); padding: 26px; border-radius: calc(var(--r) * .7); font-size: 17px; }
+[data-style="mono"] .points div { border-color: rgba(255,255,255,.16); }
+.points div::before { content: "“"; display: block; font: 60px/.6 var(--head); color: var(--accent); margin-bottom: 8px; }
+
+.pnote { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; border: 1px solid var(--line); padding: 46px; border-radius: var(--r); }
+.pnote p { margin: 0; font-size: 19px; }
+
+.lead { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.lead ul { list-style: none; padding: 0; margin: 30px 0 0; counter-reset: s; }
+.lead li { counter-increment: s; padding: 16px 0; border-top: 1px solid var(--line); display: flex; gap: 16px; }
+.lead li::before { content: "0" counter(s); color: var(--accent); font-size: 13px; padding-top: 3px; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-content: start; }
+form input, form textarea { width: 100%; padding: 17px 18px; background: transparent; border: 1px solid var(--line); color: inherit; font: inherit; border-radius: calc(var(--r) * .5); }
+form input:focus, form textarea:focus { outline: none; border-color: var(--accent); }
+form textarea, form button, form small { grid-column: 1 / -1; }
+form textarea { min-height: 110px; resize: vertical; }
+form small { color: var(--muted); font-size: 13px; }
+
+.contacts { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; }
+.cinfo div { padding: 22px 0; border-top: 1px solid var(--line); }
+.cinfo small { display: block; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.cinfo a { text-decoration: none; } .cinfo a:hover { color: var(--accent); }
+.cinfo .big { font: var(--hw) 30px/1.1 var(--head); }
+.map { min-height: 380px; border-radius: var(--r); overflow: hidden; background: var(--panel); }
+.map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; filter: grayscale(.6) contrast(1.05); }
+[data-style="atelier"] .map iframe { filter: grayscale(1) invert(.92) contrast(.9); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--line); margin-top: 40px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; align-items: end; }
+footer .fmark { font: var(--hw) clamp(60px, 12vw, 180px)/.8 var(--head); text-transform: var(--case); letter-spacing: -.02em; color: color-mix(in srgb, var(--ink) 10%, transparent); width: 100%; white-space: nowrap; overflow: hidden; }
+[data-style="mono"] footer .fmark { font-stretch: 125%; font-weight: 900; }
+footer small { color: var(--muted); }
+footer .links { display: flex; gap: 22px; flex-wrap: wrap; font-size: 14px; }
+footer .links a { text-decoration: none; color: var(--muted); } footer .links a:hover { color: var(--ink); }
+.callbar { display: none; }
+
+/* reveal */
+.rv { opacity: 0; transform: translateY(26px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+.rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } [data-style="atelier"] .hero .bg { animation: none; transform: none; } }
+
+@media (max-width: 900px) {
+  nav, .hphone { display: none; }
+  header .wrap { justify-content: space-between; }
+  .why, .why.nopic, .reviews, .lead, .contacts, .pnote { grid-template-columns: 1fr; gap: 36px; }
+  section.s { padding: 76px 0; }
+  .gallery { grid-auto-rows: 200px; } .gallery figure, .gallery figure:nth-child(5n+1) { grid-column: span 6; grid-row: auto; } .gallery figure:nth-child(5n+1) { grid-column: span 12; grid-row: span 2; }
+  [data-style="mono"] .hero .stage { min-height: 0; }
+  [data-style="mono"] .gw { flex-direction: column; }
+  [data-style="mono"] .hero .photo { position: relative; left: 0; top: 0; translate: 0; height: auto; width: 100%; max-width: none; margin-top: 18px; }
+  [data-style="mono"] .hero .bottom { flex-direction: column; align-items: flex-start; }
+  [data-style="mono"] .hero .right { text-align: left; } [data-style="mono"] .hero .right::before { margin-left: 0; }
+  [data-style="bold"] .hero .panel { min-height: 0; padding: 230px 22px 26px; }
+  [data-style="bold"] .hero h1 { text-align: left; }
+  [data-style="bold"] .chips { justify-content: flex-start; }
+  [data-style="bold"] .notch { max-width: 78%; padding: 18px 20px 20px 18px; }
+  [data-style="bold"] .notch b { font-size: 26px; } [data-style="bold"] .notch p, [data-style="bold"] .notch .btn { display: none; }
+  [data-style="bold"] .dark { margin: 0 12px; }
+  .stat { border-left: 0; border-top: 1px solid var(--line); } .stat:first-child { border-top: 0; }
+  form { grid-template-columns: 1fr; }
+  [data-style="mono"] .topline span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } [data-style="mono"] .topline a { display: none; }
+  .callbar { display: flex; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50; gap: 8px; }
+  .callbar .btn { flex: 1; }
+  footer { padding-bottom: 100px; }
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>window.CONTENT = {"slug": "robbins-auto", "lang": "en", "niche": "auto repair", "meta": {"title": "Robbins Auto Repair & Sales | Family auto repair in Rochester, NH", "description": "Family-owned auto repair and car sales at 20 Summer St, Rochester, NH. Honest pricing, no pressure. 5.0 on Google. Call (603) 948-1032."}, "brand": {"name": "Robbins Auto Repair & Sales", "tagline": "Rochester, NH", "wordmark": "Robbins"}, "hero": {"eyebrow": "Family-owned · 20 Summer St, Rochester", "title": "Old-school mechanics,", "title_accent": "honest pricing", "subtitle": "A Rochester family shop for repairs and car sales. We tell you what your car needs and what it costs before we start, with no pressure.", "cta": "Book a repair", "photo": "img/hero.jpg", "notch": "Rochester's *family* shop"}, "contacts": {"phones": ["(603) 948-1032"], "address": "20 Summer St, Rochester, NH 03867", "address_note": "", "hours": "", "hours_short": "", "hours_note": "", "email": "", "map_q": "20 Summer St, Rochester, NH 03867", "mobile": false, "links": {"facebook": "https://www.facebook.com/RobbinsAutoRepairandSales", "instagram": "", "google": "https://www.google.com/maps/search/?api=1&query=Robbins+Auto+Repair+and+Sales+20+Summer+St%2C+Rochester%2C+NH+03867", "whatsapp": ""}}, "services": {"kicker": "What we do", "title": "Repairs and car sales", "lead": "One family shop for keeping your car on the road, or finding the next one.", "items": [{"name": "Auto repair", "text": "Diagnosis and repair for everyday cars and trucks.", "price": ""}, {"name": "Brake service", "text": "Pads, rotors and a full brake check.", "price": ""}, {"name": "Car sales", "text": "Vehicles for sale right at the shop.", "price": ""}], "show_price_on_request": true}, "advantages": {"kicker": "Why Robbins", "title": "A neighbourhood shop", "lead": "The Robbins family has lived in Rochester since 2018 and opened the shop in February 2026.", "items": [{"icon": "shield", "title": "Honest pricing, no pressure", "text": "Fair prices and no pushing you into work you don't need."}, {"icon": "wrench", "title": "Old-school mechanic feel", "text": "You talk to the people who fix your car, not a call centre."}, {"icon": "check", "title": "Part of the community", "text": "You'll see the Robbins family at Rochester events, youth baseball and the Christmas parade."}]}, "prices": {"title": "What a repair costs", "items": [], "note": "We quote after we've looked at the car, so you only pay for what actually needs fixing. Call and describe the problem."}, "gallery": [{"url": "img/g1.jpg", "alt": "Robbins Auto Repair & Sales"}, {"url": "img/g2.jpg", "alt": "Robbins Auto Repair & Sales"}, {"url": "img/g3.jpg", "alt": "Robbins Auto Repair & Sales"}, {"url": "img/g4.jpg", "alt": "Robbins Auto Repair & Sales"}, {"url": "img/g5.jpg", "alt": "Robbins Auto Repair & Sales"}], "steps": {"title": "", "items": ["Call or send a message and tell us about the car", "We check it and agree on the work and price", "You pick up the car"]}, "cta": {"title": "Book a repair", "text": "Call the shop or send a message on Facebook."}, "footer_note": "Demo website. Information is taken from the business's public listings.", "sources": ["https://news.rochesternh.gov/chamber-of-commerce-welcomes-robbins-auto-repair-sales-llc-with-grand-opening-ribbon-cutting-ceremony/"], "rating": {"value": "5.0", "count": 86, "source": "on Google", "label": "86 reviews on Google"}, "why_photo": "img/why.jpg"}; window.UI = {"book": "Book now", "call": "Call", "services": "Services", "why": "Why us", "photos": "Photos", "reviews": "Reviews", "contacts": "Contacts", "scroll": "Scroll", "rating": "rating", "reviews_n": "reviews", "services_n": "services under one roof", "hours": "Opening hours", "price": "Price", "after": "after inspection", "inside": "Inside the shop", "say": "What customers say", "read": "Read on Google", "quote": "Ask for a quote", "touch": "Get in touch", "f_name": "Your name", "f_phone": "Your phone", "f_car": "Make and model", "f_year": "Year", "f_msg": "What’s wrong with the car?", "send_wa": "Send via WhatsApp", "send_call": "Call to book", "hint_wa": "Your message opens in WhatsApp, just press Send.", "hint_call": "This will call the shop.", "phone": "Phone", "address": "Address", "message": "Message us on", "msg_hello": "Hello! I’d like to book."};</script>
+<script>
+(function () {
+  var C = window.CONTENT, T = window.UI, st = document.documentElement.getAttribute("data-style");
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var has = function (a) { return Array.isArray(a) ? a.length > 0 : !!a; };
+  var tel = function (p) { return "tel:" + String(p).replace(/[^\d+]/g, ""); };
+  var arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>';
+  var phoneI = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>';
+  var B = C.brand || {}, H = C.hero || {}, ct = C.contacts || {}, L = ct.links || {};
+  var S = C.services || {}, A = C.advantages || {}, P = C.prices || {}, R = C.reviews || {}, St = C.steps || {};
+  var phones = ct.phones || [], mainPhone = phones[0];
+  var msgr = L.whatsapp || L.facebook, msgrName = L.whatsapp ? "WhatsApp" : L.facebook ? "Facebook" : "";
+  var gal = C.gallery || [];
+  var h = [];
+  var cta = '<a class="btn btn-accent" href="#lead">' + esc(H.cta || T.book) + arrow + '</a>';
+  var callBtn = mainPhone ? '<a class="btn btn-line" href="' + tel(mainPhone) + '">' + phoneI + esc(T.call) + '</a>' : "";
+
+  var nav = [];
+  if (has(S.items)) nav.push('<a href="#services">' + T.services + '</a>');
+  if (has(A.items)) nav.push('<a href="#why">' + T.why + '</a>');
+  if (gal.length) nav.push('<a href="#photos">' + T.photos + '</a>');
+  if (has(R.points)) nav.push('<a href="#reviews">' + T.reviews + '</a>');
+  nav.push('<a href="#contacts">' + T.contacts + '</a>');
+  var logo = '<a class="logo" href="#top">' + (B.logo ? '<img src="' + esc(B.logo) + '" alt="' + esc(B.name) + '">' : "") + '<span>' + esc(B.name) + '<small>' + esc(B.tagline || "") + '</small></span></a>';
+
+  if (st === "mono") h.push('<div class="topline" style="position:fixed;inset:0 0 auto;z-index:41"><div class="wrap"><span>' + esc(H.eyebrow || "") + '</span>' + (mainPhone ? '<a href="' + tel(mainPhone) + '" style="text-decoration:none">' + esc(mainPhone) + '</a>' : "") + '</div></div>');
+  h.push('<header' + (st === "mono" ? ' style="top:30px"' : "") + '><div class="wrap">' + logo + '<nav>' + nav.join("") + '</nav>' +
+    (mainPhone && st !== "mono" ? '<a class="hphone" href="' + tel(mainPhone) + '">' + esc(mainPhone) + '</a>' : "") + cta + '</div></header>');
+
+  // hero, one per look
+  var t1 = esc(H.title), t2 = H.title_accent ? '<em>' + esc(H.title_accent) + '</em>' : "";
+  if (st === "atelier") {
+    h.push('<section class="hero' + (H.photo ? "" : " nophoto") + '" id="top"><div class="bg"' + (H.photo ? ' style="background-image:url(\'' + esc(H.photo) + '\')"' : "") + '></div><div class="hin">' +
+      '<div class="eyebrow rv">' + esc(H.eyebrow || "") + '</div><h1 class="rv" style="--d:.1s">' + t1 + t2 + '</h1>' +
+      (H.subtitle ? '<p class="sub rv" style="--d:.2s">' + esc(H.subtitle) + '</p>' : "") + '<div class="actions rv" style="--d:.3s">' + cta + callBtn + '</div></div>' +
+      '<div class="scroll">' + esc(T.scroll) + '</div></section>');
+  } else if (st === "mono") {
+    h.push('<section class="hero" id="top"><div class="stage"><div class="eyebrow rv">' + esc(B.tagline || "") + '</div>' +
+      '<div class="gw"><div class="giant rv">' + esc(B.wordmark || B.name) + '</div>' + (H.photo ? '<img class="photo rv" style="--d:.15s" src="' + esc(H.photo) + '" alt="' + esc(B.name) + '">' : "") + '</div>' +
+      '<div class="bottom"><div class="left rv" style="--d:.25s"><h1>' + t1 + ' ' + t2 + '</h1>' + (H.subtitle ? '<p class="sub">' + esc(H.subtitle) + '</p>' : "") +
+      '<div class="actions">' + cta + callBtn + '</div></div>' + (H.aside ? '<div class="right rv" style="--d:.35s">' + esc(H.aside) + '</div>' : "") + '</div></div>' +
+      (has(S.items) ? '<div class="band"><div class="wrap">' + S.items.slice(0, 3).map(function (s) { return '<a href="#services">' + esc(s.name) + '<span>→</span></a>'; }).join("") + '</div></div>' : "") + '</section>');
+  } else {
+    h.push('<section class="hero' + (H.photo ? "" : " nophoto") + '" id="top"><div class="wrap"><div class="panel" data-mark="' + esc(B.wordmark || B.name) + '"' + (H.photo ? ' style="background-image:url(\'' + esc(H.photo) + '\')"' : "") + '>' +
+      '<div class="notch rv"><b>' + esc(H.notch || B.name).replace(/\*(.+?)\*/g, "<i>$1</i>") + '</b><p>' + esc(H.eyebrow || "") + '</p>' + cta + '</div>' +
+      '<h1 class="rv" style="--d:.1s">' + t1 + t2 + '</h1>' +
+      (has(S.items) ? '<div class="chips rv" style="--d:.2s">' + S.items.slice(0, 4).map(function (s) { return '<a href="#services">' + esc(s.name) + '</a>'; }).join("") + '</div>' : "") +
+      '</div></div></section>');
+  }
+
+  // stats
+  var stats = [];
+  if (C.rating && C.rating.value) stats.push([esc(C.rating.value), esc(T.rating) + " " + esc(C.rating.source || "")]);
+  if (C.rating && C.rating.count) stats.push([esc(C.rating.count), esc(T.reviews_n)]);
+  if (has(S.items)) stats.push([S.items.length, esc(T.services_n)]);
+  if (ct.hours_short) stats.push(['<span style="font-size:.62em">' + esc(ct.hours_short) + '</span>', esc(ct.hours_note || T.hours)]);
+  if (stats.length >= 2) h.push('<section class="s" style="padding-bottom:0' + (st === "bold" ? ';padding-top:40px' : "") + '"><div class="wrap"><div class="stats">' +
+    stats.map(function (s, i) { return '<div class="stat rv" style="--d:' + i * .08 + 's"><b>' + s[0] + '</b><span>' + s[1] + '</span></div>'; }).join("") + '</div></div></section>');
+
+  // services
+  if (has(S.items)) h.push('<section class="s" id="services"><div class="wrap"><div class="head"><div><div class="kicker">' + esc(S.kicker || T.services) + '</div><h2 class="rv">' + esc(S.title) + '</h2></div>' +
+    (S.lead ? '<p class="rv">' + esc(S.lead) + '</p>' : "") + '</div><div class="svc">' +
+    S.items.map(function (s, i) { return '<div class="card rv" style="--d:' + Math.min(i, 6) * .06 + 's"><span class="n">' + (i < 9 ? "0" : "") + (i + 1) + '</span><h3>' + esc(s.name) + '</h3>' + (s.text ? '<p>' + esc(s.text) + '</p>' : "") +
+      '<div class="price"><span>' + T.price + '</span>' + (s.price ? '<b>' + esc(s.price) + '</b>' : (mainPhone ? '<a href="' + tel(mainPhone) + '">' + T.after + ' →</a>' : '<b>' + T.after + '</b>')) + '</div></div>'; }).join("") + '</div></div></section>');
+
+  // why
+  if (has(A.items)) {
+    var pic = (C.why_photo || (gal[1] && gal[1].url) || "");
+    h.push('<section class="s" id="why" style="padding-top:0"><div class="wrap why' + (pic ? "" : " nopic") + '">' +
+      (pic ? '<div class="pic rv"><img loading="lazy" src="' + esc(pic) + '" alt=""></div>' : '<div><div class="kicker">' + esc(A.kicker || "") + '</div><h2 class="rv">' + esc(A.title) + '</h2>' + (A.lead ? '<p class="muted rv">' + esc(A.lead) + '</p>' : "") + '</div>') +
+      '<div>' + (pic ? '<div class="kicker">' + esc(A.kicker || "") + '</div><h2 class="rv">' + esc(A.title) + '</h2>' + (A.lead ? '<p class="muted rv">' + esc(A.lead) + '</p>' : "") : "") +
+      '<ul>' + A.items.map(function (a, i) { return '<li class="rv" style="--d:' + i * .08 + 's"><i>0' + (i + 1) + '</i><b>' + esc(a.title) + '</b><p>' + esc(a.text) + '</p></li>'; }).join("") + '</ul></div></div></section>');
+  }
+
+  // gallery
+  if (gal.length) h.push('<section class="s" id="photos" style="padding-top:0"><div class="wrap"><div class="head"><div><div class="kicker">' + T.photos + '</div><h2 class="rv">' + esc(C.gallery_title || T.inside) + '</h2></div></div><div class="gallery">' +
+    gal.slice(0, 10).map(function (g, i) { return '<figure class="rv" style="--d:' + (i % 3) * .08 + 's"><img loading="lazy" src="' + esc(g.url) + '" alt="' + esc(g.alt || "") + '"></figure>'; }).join("") + '</div></div></section>');
+
+  // reviews
+  if (has(R.points) || (C.rating && C.rating.value)) h.push('<section class="s dark" id="reviews"><div class="wrap"><div class="head"><div><div class="kicker">' + T.reviews + '</div><h2 class="rv">' + esc(R.title || T.say) + '</h2></div>' + (R.lead ? '<p>' + esc(R.lead) + '</p>' : "") + '</div><div class="reviews">' +
+    (C.rating && C.rating.value ? '<div class="score rv"><b>' + esc(C.rating.value) + '</b><div class="st">★★★★★</div><p class="muted">' + esc(C.rating.label || "") + '</p>' + (L.google ? '<a href="' + esc(L.google) + '" target="_blank" rel="noopener">' + T.read + ' ↗</a>' : "") + '</div>' : "<div></div>") +
+    '<div class="points">' + (R.points || []).map(function (p, i) { return '<div class="rv" style="--d:' + i * .08 + 's">' + esc(typeof p === "string" ? p : p.text) + '</div>'; }).join("") + '</div></div></div></section>');
+
+  // price note
+  if (P.note) h.push('<section class="s" id="prices"><div class="wrap"><div class="pnote rv"><div><div class="kicker">' + T.price + '</div><p>' + esc(P.note) + '</p></div><div class="actions" style="justify-content:flex-end">' + (mainPhone ? '<a class="btn btn-accent" href="' + tel(mainPhone) + '">' + phoneI + T.quote + '</a>' : "") + '</div></div></div></section>');
+
+  // lead form
+  h.push('<section class="s" id="lead" style="padding-top:0"><div class="wrap lead"><div><div class="kicker">' + T.touch + '</div><h2 class="rv">' + esc((C.cta && C.cta.title) || T.book) + '</h2>' +
+    (C.cta && C.cta.text ? '<p class="muted">' + esc(C.cta.text) + '</p>' : "") + (has(St.items) ? '<ul>' + St.items.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join("") + '</ul>' : "") + '</div>' +
+    '<form id="leadform" class="rv"><input name="name" placeholder="' + T.f_name + '" required><input name="phone" type="tel" placeholder="' + T.f_phone + '" required>' +
+    '<input name="car" placeholder="' + T.f_car + '"><input name="year" placeholder="' + T.f_year + '"><textarea name="msg" placeholder="' + T.f_msg + '"></textarea>' +
+    '<button class="btn btn-accent" type="submit">' + (L.whatsapp ? T.send_wa : T.send_call) + arrow + '</button><small>' + (L.whatsapp ? T.hint_wa : T.hint_call) + '</small></form></div></section>');
+
+  // contacts
+  var route = ct.address ? "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(ct.map_q || ct.address) : "";
+  h.push('<section class="s" id="contacts" style="padding-top:0"><div class="wrap contacts"><div class="cinfo"><div class="kicker">' + T.contacts + '</div>' +
+    (phones.length ? '<div><small>' + T.phone + '</small>' + phones.map(function (p) { return '<a class="big" href="' + tel(p) + '">' + esc(p) + '</a>'; }).join("<br>") + '</div>' : "") +
+    (ct.email ? '<div><small>E-mail</small><a href="mailto:' + esc(ct.email) + '">' + esc(ct.email) + '</a></div>' : "") +
+    (ct.address ? '<div><small>' + T.address + '</small>' + (route && !ct.mobile ? '<a href="' + esc(route) + '" target="_blank" rel="noopener">' + esc(ct.address) + ' ↗</a>' : esc(ct.address)) + (ct.address_note ? '<br><span class="muted">' + esc(ct.address_note) + '</span>' : "") + '</div>' : "") +
+    (ct.hours ? '<div><small>' + T.hours + '</small>' + esc(ct.hours) + '</div>' : "") +
+    (msgr ? '<div><a class="btn btn-accent" href="' + esc(msgr) + '" target="_blank" rel="noopener">' + T.message + ' ' + msgrName + '</a></div>' : "") +
+    '</div><div class="map">' + (ct.map_q || ct.address ? '<iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=' + encodeURIComponent(ct.map_q || ct.address) + '&z=' + (ct.mobile ? 11 : 15) + '&output=embed"></iframe>' : "") + '</div></div></section>');
+
+  h.push('<footer><div class="wrap"><div class="fmark">' + esc(B.wordmark || B.name) + '</div><small>© ' + new Date().getFullYear() + ' ' + esc(B.name) + '. ' + esc(C.footer_note || "") + '</small><div class="links">' + nav.join("") +
+    (L.facebook ? '<a href="' + esc(L.facebook) + '" target="_blank" rel="noopener">Facebook ↗</a>' : "") + (L.instagram ? '<a href="' + esc(L.instagram) + '" target="_blank" rel="noopener">Instagram ↗</a>' : "") +
+    (L.google ? '<a href="' + esc(L.google) + '" target="_blank" rel="noopener">Google Maps ↗</a>' : "") + '</div></div></footer>');
+  if (mainPhone) h.push('<div class="callbar"><a class="btn btn-accent" href="' + tel(mainPhone) + '">' + phoneI + T.call + '</a>' + (msgr ? '<a class="btn btn-line" style="background:var(--bg)" href="' + esc(msgr) + '" target="_blank" rel="noopener">' + msgrName + '</a>' : "") + '</div>');
+
+  document.getElementById("app").innerHTML = h.join("");
+
+  // the giant word (mono) always spans the full width
+  var fit = function () { document.querySelectorAll(".giant").forEach(function (g) { g.style.fontSize = "100px"; g.style.fontSize = Math.min(100 * g.parentNode.clientWidth / g.scrollWidth, 380) + "px"; }); };
+  fit(); addEventListener("resize", fit); if (document.fonts) document.fonts.ready.then(fit);
+
+  // reveal on scroll; everything above the fold shows at once
+  var els = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: .1, rootMargin: "0px 0px -30px 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  }
+  var pass = function () { els.forEach(function (el) { if (el.getBoundingClientRect().top < innerHeight) el.classList.add("in"); }); };
+  requestAnimationFrame(pass); setTimeout(pass, 1200); addEventListener("scroll", pass, { passive: true });
+  var hd = document.querySelector("header");
+  addEventListener("scroll", function () { hd.classList.toggle("scrolled", scrollY > 30); }, { passive: true });
+
+  document.getElementById("leadform").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = e.target.elements;
+    var text = T.msg_hello + "\n" + T.f_name + ": " + f.name.value + "\n" + T.f_phone + ": " + f.phone.value +
+      (f.car.value ? "\n" + T.f_car + ": " + f.car.value + (f.year.value ? ", " + f.year.value : "") : "") + (f.msg.value ? "\n" + f.msg.value : "");
+    if (L.whatsapp) window.open("https://wa.me/" + L.whatsapp.replace(/\D/g, "") + "?text=" + encodeURIComponent(text), "_blank");
+    else if (mainPhone) location.href = tel(mainPhone);
+  });
+})();
+</script>
+</body>
+</html>
